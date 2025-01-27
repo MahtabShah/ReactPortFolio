@@ -19,6 +19,7 @@
   --wh-clr: rgb(255, 255, 255);
   --t-clr1: rgb(226, 218, 218);
   --t-clr2: rgb(20, 20, 20);
+  --vr-f: clamp(2px, 3vw, 1rem);
 }
 
 body {
@@ -147,7 +148,7 @@ body {
 
 .header-item {
   font-family: sans-serif, Arial;
-  font-size: clamp(2px, 3vw, 1rem);
+  font-size: var(--vr-f);
 }
 
 #nm {
@@ -198,7 +199,8 @@ body {
   /* box-shadow: 0 0 1px rgb(0, 191, 255); */
   /* border-radius: 10px; */
   /* border-radius: 10px; */
-  font-size: clamp(8px, calc(5px + 1.4vw), 1rem);
+  /* font-size: clamp(8px, calc(5px + 1.4vw), 1rem); */
+  font-size: var(--vr-f);
 }
 
 .name {
@@ -229,7 +231,9 @@ body {
   display: flex;
   flex-direction: column;
   margin: 30px 5px;
-  font-size: clamp(2px, calc(0.78vw + 40%), 1rem);
+  font-size: clamp(2px, calc(0.878vw + 40%), 1rem);
+  /* font-size: var(--vr-f); */
+
   height: fit-content;
 }
 
@@ -249,7 +253,7 @@ body {
   }
 
   .introduction {
-    font-size: clamp(6px, calc(4px + 2vw), 1rem);
+    font-size: var(--vr-fp);
   }
 
   .h2-type {
@@ -362,8 +366,8 @@ body {
 }
 
 .all-right {
-  background: #555353;
-  height: 120px;
+  background: #151515;
+  height: 200px;
   color: azure;
   /* text-align: center; */
   /* padding: 34px; */
@@ -405,12 +409,12 @@ body {
 
 .m-card-title {
   margin: 8px;
-  font-size: 20px;
+  font-size: var(--vr-f);
   color: #ccc;
 }
 
 .m-card-description {
   margin: 0;
-  font-size: 14px;
+  font-size: var(--vr-f);
   color: #ddd;
 }

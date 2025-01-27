@@ -11,9 +11,10 @@ export default function CodePage() {
             <pre>
               <code>
                 {`function Intro() {
-  console.log(Hello..., My Name is \n  Mahtab Shah, a web developer.);
+  console.log(Hello...!
+  My Name is Mahtab Shah \n  a web developer);
 }
-
+  
 Intro();`}
               </code>
             </pre>
@@ -113,7 +114,10 @@ export function IntroCode() {
             <span className="brace">{"{"}</span>
             <br />
           </div>
-          <div className="info-container" style={{ paddingLeft: "20px" }}>
+          <div
+            className="info-container"
+            style={{ paddingLeft: "clamp(10px, 10%, 20px)" }}
+          >
             {Object.entries(info).map(([key, value]) => (
               <div key={key}>
                 <span className="clr-inner-cls">{key}:</span>{" "}
@@ -124,10 +128,10 @@ export function IntroCode() {
           <br />
 
           {/* Technical Skills */}
-          <div style={{ paddingLeft: "20px" }}>
+          <div style={{ paddingLeft: "clamp(10px, 10%, 20px)" }}>
             <span>Technical_skills:</span>
             <span className="brace">{" {"}</span>
-            <div style={{ paddingLeft: "20px" }}>
+            <div style={{ paddingLeft: "clamp(10px, 10%, 20px)" }}>
               <span className="keywords">const</span>{" "}
               <span className="clr-class-nm">Strong_ProblemSolving</span> ={" "}
               <span className="keywords">true</span>; <br />
