@@ -2,6 +2,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Form from "./Form";
 import CodePage from "./Code.env";
 import "./App.css";
+import img1 from "./asset/Screenshot 2025-01-27 194133.png";
+import img2 from "./asset/Screenshot 2025-01-27 130757.png";
+import img3 from "./asset/Screenshot 2025-01-27 195704.png";
 
 let meshs = () => {
   // const Width = parseInt(window.outerWidth);
@@ -151,10 +154,18 @@ const ProjectsData = {
   titles: [
     "LIVE VISUAL STUDIO CODE (LVSC)",
     "WEB COLOR PALLET APPLICATION",
-    "REGEX TASTER APPLICATION",
+    "SORTING VISUALIZER WEB APP",
   ],
 
   discriptions: [
+    <>
+      A fully responsive web application built using HTML, CSS, and JavaScript.
+      {<br />}Designed an interactive tool that offers a variety of color
+      schemes for websites, including monochromatic, complementary, triadic,
+      tetradic, and analogous palettes.{<br />}Implemented a user-friendly
+      interface for exploring color wheels and combinations tailored for web
+      design.
+    </>,
     <>
       A web application built using HTML, CSS, and JavaScript. {<br />}
       Developed a live Visual Studio Code editor, enabling users to write HTML,
@@ -166,48 +177,52 @@ const ProjectsData = {
     </>,
 
     <>
-      A fully responsive web application built using HTML, CSS, and JavaScript.
-      {<br />}Designed an interactive tool that offers a variety of color
-      schemes for websites, including monochromatic, complementary, triadic,
-      tetradic, and analogous palettes.{<br />}Implemented a user-friendly
-      interface for exploring color wheels and combinations tailored for web
-      design.
-    </>,
-    <>
-      A web application built using HTML, CSS, and JavaScript.{<br />}
-      Implementing a user-friendly interface to test and validate regular
-      expressions in real time.{<br />}Allows users to create custom inputs and
-      test their regex with instant feedback in a user-friendly interface.
+      Allow users to select the sorting algorithm e.g., Bubble Sort, Merge Sort,
+      Quick Sort, etc. Provide controls for custom array size and speed
+      adjustment to make the visualization more engaging.
+      {<br />}
+      Add a progress bar or step counter to show the sorting progress
+      dynamically.
+      {<br />}
+      Make it educational for users who want to learn how sorting algorithms
+      work.
     </>,
   ],
 
-  srcs: [
-    "Screenshot 2025-01-27 130757.png",
-    "Screenshot 2025-01-27 130757.png",
-    "Screenshot 2025-01-27 130757.png",
-  ],
+  srcs: [img1, img2, img3],
 };
 
 export function Projects({ projects }) {
   return (
     <div className="proj-c">
+      <span
+        style={{
+          color: "var(--t-clr1)",
+          position: "absolute",
+        }}
+      >
+        PROJECTS
+      </span>
       {projects.titles.map((t, index) => (
         <>
           <div key={index} className="m-card">
             <h2 key={index} className="m-card-title">
               {t}
             </h2>
-            <div
+            {/* <div
               className="i"
               style={{
-                background: `url(
-                  /${projects.srcs[index]}
-                )`,
-                backgroundSize: "cover", // Ensures the image covers the div
-                backgroundPosition: "center", // Centers the image within the div
-                backgroundRepeat: "no-repeat", // Prevents the image from repeating
+                background: `url(${projects.srcs[index]})`,
               }}
-            ></div>
+            ></div> */}
+            <div style={{ display: "flex", aspectRatio: "11/6" }}>
+              {/* <img src={projects.srcs[index]} alt="" style={{ width: "50%" }} /> */}
+              <img
+                src={projects.srcs[index]}
+                alt=""
+                style={{ width: "100%" }}
+              />
+            </div>
             <div className="m-card-content">
               <p className="m-card-description">
                 {projects.discriptions[index]}

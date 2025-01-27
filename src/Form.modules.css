@@ -1,18 +1,3 @@
-:root {
-  --bdr-clr: rgb(145, 247, 249);
-  --bdr: 2px solid red;
-  /* --mn-clr: #030117; */
-  --mn-clr: #9792cf;
-  --mn-l-clr: #040130;
-  --mn-ll-clr: #00073e;
-  --pr-clr: rgb(12, 231, 231);
-  --bl-clr: rgb(0, 0, 0);
-  --wh-clr: rgb(255, 255, 255);
-  --t-clr1: rgb(226, 218, 218);
-  --t-clr2: rgb(20, 20, 20);
-  --fr-clr: #000000;
-}
-
 form {
   border: var(--bdr);
   position: relative;
