@@ -8,7 +8,7 @@ let meshs = () => {
   // const Height = parseInt(window.outerHeight);
 
   // let numberOfMesh = Width + (Width * Height) / 1600;
-  let numberOfMesh = 300;
+  let numberOfMesh = 3;
   let elements = [];
   for (let i = 0; i < numberOfMesh; i++) {
     elements.push(<div></div>);
@@ -149,7 +149,7 @@ export function Footer() {
 
 const ProjectsData = {
   titles: [
-    "LVSC-Live Visual Studio Code",
+    "LIVE VISUAL STUDIO CODE (LVSC)",
     "WEB COLOR PALLET APPLICATION",
     "REGEX TASTER APPLICATION",
   ],
