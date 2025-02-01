@@ -2,8 +2,8 @@ form {
   border: var(--bdr);
   position: relative;
   /* margin: 10px; */
-  padding: 10px;
-  max-width: 600px;
+  padding: 20px 10px;
+  max-width: 500px;
   border: 10px solid aqua;
   background: #030117;
   color: rgb(244, 241, 237);
