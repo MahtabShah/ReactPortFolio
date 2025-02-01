@@ -34,16 +34,6 @@ export default function Background() {
   );
 }
 
-// export function ShortInfo() {
-//   return (
-//     <>
-//       <div className="front-pg">
-//         <div className="intro"></div>
-//       </div>
-//     </>
-//   );
-// }
-
 export function Page() {
   let header = {
     items: ["Mahtab Shah", "Home", "About", "Contact", "Get resume"],
@@ -54,19 +44,15 @@ export function Page() {
     <>
       <div className="p">
         <div className="hr">
-          <div className="fix-bg">
-            <div className="fix-hr">
-              {header.items.map((item, index) => (
-                <span
-                  className="header-item"
-                  id={header.ids[index]}
-                  key={header.ids[index]}
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
-          </div>
+          {header.items.map((item, index) => (
+            <span
+              className="header-item"
+              id={header.ids[index]}
+              key={header.ids[index]}
+            >
+              {item}
+            </span>
+          ))}
         </div>
 
         <div className="m">
@@ -94,7 +80,6 @@ export function Page() {
         </div>
 
         <div className="dsr">
-          {/* <Form className="c-form"></Form> */}
           <CodePage></CodePage>
         </div>
       </div>
@@ -152,8 +137,9 @@ export function Footer() {
 
 const ProjectsData = {
   titles: [
-    "LIVE VISUAL STUDIO CODE (LVSC)",
     "WEB COLOR PALLET APPLICATION",
+    "LIVE VISUAL STUDIO CODE (LVSC)",
+
     "SORTING VISUALIZER WEB APP",
   ],
 
@@ -234,3 +220,4 @@ export function Projects({ projects }) {
     </div>
   );
 }
+
