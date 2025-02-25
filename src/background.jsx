@@ -245,15 +245,19 @@ export function SocialMedia() {
 
         <div className="social-media">
           {social.name.map((nm, i) => (
-            <a
-              href={social.links[i]}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={nm}
-              key={i}
-            >
-              <i className={`fab fa-${nm}`}></i>
-            </a>
+            <div>
+              {" "}
+              <a
+                href={social.links[i]}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={nm}
+                key={i}
+              >
+                <i className={`fab fa-${nm}`}></i>
+              </a>
+              <p>{nm}</p>
+            </div>
           ))}
         </div>
       </div>

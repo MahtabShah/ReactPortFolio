@@ -102,7 +102,7 @@
 .all-right p {
   /* border: 2px solid red; */
   text-align: center;
-  padding: 10px;
+  padding: 0 10px;
 }
 
 @media (max-width: 800px) {
