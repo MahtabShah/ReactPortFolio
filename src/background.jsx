@@ -1,12 +1,12 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import Form from "./Form";
-import CodePage from "./Code.env";
+// import Form from "./Form";
+// import CodePage from "./Code.env";
 import "./App.css";
 import img1 from "./asset/Screenshot 2025-01-27 194133.png";
 import img2 from "./asset/Screenshot 2025-01-27 130757.png";
 import img3 from "./asset/Screenshot 2025-01-27 195704.png";
 
-import Achive from "./AchiveCirtified";
+// import Achive from "./AchiveCirtified";
 import Footar from "./Footer";
 
 export default function Background() {
