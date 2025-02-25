@@ -22,7 +22,7 @@ form {
   );
   background-clip: border-box; /* Clip the gradient to the border */
   height: fit-content;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   border-image-slice: 1;
   z-index: 3;
   /* box-shadow: 3px 3px 50px var(--mn-ll-clr); */

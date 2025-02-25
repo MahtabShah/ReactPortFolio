@@ -1,0 +1,120 @@
+.all-right {
+  min-height: 94vh;
+  color: var(--t-clr1);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background-color: var(--hdr-clr);
+  /* border: 2px solid red; */
+  /* background-size: 100vw; */
+}
+
+.msgSocialMedia {
+  display: flex;
+  /* border: 2px solid red; */
+  padding: 3%;
+  gap: 20px;
+}
+
+.msgbox {
+  /* border: 2px solid rgb(243, 8, 8); */
+  box-shadow: 0 0 2px rgb(134, 132, 132);
+  flex-grow: 1.4;
+  max-width: 760px;
+
+  /* display: flex; */
+  /* background: url(https://img.freepik.com/free-photo/flat-lay-blue-monday-paper-with-copy-space_23-2148756188.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+}
+
+.msgbox form {
+  background-color: rgba(240, 248, 255, 0.002);
+  border: none;
+  max-width: initial;
+
+  /* color: rgb(55, 54, 54); */
+}
+
+.textarea {
+  height: 20vh;
+  background-color: rgba(250, 251, 251, 0);
+  color: antiquewhite;
+}
+
+.textarea:focus {
+  background-color: rgba(0, 255, 255, 0);
+  caret-color: aliceblue;
+  color: antiquewhite;
+}
+
+.socil-side {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  /* height: 100%; */
+  /* max-width: 50%; */
+  /* border: 2px solid red; */
+}
+
+.social-media {
+  /* border: 1px solid rgba(238, 173, 173, 0.082); */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.social-media a {
+  margin: 10px;
+  /* border: 2px solid red; */
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.social-media a i {
+  /* width: 440px; */
+  font-size: 4vw;
+  /* border: 2px solid yellow; */
+  flex-grow: 1;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(215, 197, 197);
+  border: 2px solid rgb(122, 131, 185);
+  max-width: 100px;
+  border-radius: 30% 0;
+  aspect-ratio: 1/1;
+  background: repeating-linear-gradient(
+    120deg,
+    #3f9ffe,
+    #3c64bc,
+    rgb(78, 78, 255)
+  );
+}
+
+.all-right p {
+  /* border: 2px solid red; */
+  text-align: center;
+  padding: 10px;
+}
+
+@media (max-width: 800px) {
+  .msgSocialMedia {
+    flex-direction: column;
+  }
+
+  .social-media a i {
+    /* width: 440px; */
+    font-size: 2rem;
+  }
+}
+
+.afterSslmd {
+  /* border: 2px solid rgb(43, 104, 202); */
+  flex-grow: 1;
+  max-width: 100%;
+}

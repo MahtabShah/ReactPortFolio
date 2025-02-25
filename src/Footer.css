@@ -1,0 +1,64 @@
+.BgParent {
+  /* border: 2px solid red; */
+  min-height: 90vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(120deg, #7189fe, #40c9ec);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vertC {
+  /* border: 2px solid red; */
+  width: 100%;
+  height: 200vh;
+  position: absolute;
+  right: 0;
+  background: repeating-linear-gradient(
+    120deg,
+    rgb(80, 144, 248),
+    #6a43f7,
+    rgb(85, 190, 243)
+  );
+  clip-path: polygon(60% 0%, 36% 100%, 100% 100%, 100% 0%);
+
+  /* overflow: hidden; */
+}
+
+.ver30deg {
+  /* border: 2px solid red; */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* height: calc(); */
+  /* left: 20vw; */
+  top: 30%;
+  right: 0;
+  /* bottom: 0; */
+
+  background: #9df86f;
+  background: repeating-linear-gradient(
+    120deg,
+    rgb(76, 190, 248),
+    #64a4f9,
+    rgb(90, 161, 242)
+  );
+  transform: rotateZ(20deg);
+
+  z-index: 2;
+}
+
+.ver70deg {
+  border: 2px solid red;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* height: calc(); */
+  /* left: 20vw; */
+  top: 60%;
+  left: 30%;
+  background: #6f71f8;
+  transform: rotateZ(45deg);
+  z-index: 3;
+}

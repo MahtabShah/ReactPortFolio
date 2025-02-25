@@ -6,29 +6,16 @@ import img1 from "./asset/Screenshot 2025-01-27 194133.png";
 import img2 from "./asset/Screenshot 2025-01-27 130757.png";
 import img3 from "./asset/Screenshot 2025-01-27 195704.png";
 
-let meshs = () => {
-  // const Width = parseInt(window.outerWidth);
-  // const Height = parseInt(window.outerHeight);
-
-  // let numberOfMesh = Width + (Width * Height) / 1600;
-  let numberOfMesh = 3;
-  let elements = [];
-  for (let i = 0; i < numberOfMesh; i++) {
-    elements.push(<div></div>);
-  }
-
-  return elements;
-};
+import Achive from "./AchiveCirtified";
+import Footar from "./Footer";
 
 export default function Background() {
   return (
     <>
-      {/* <div className="parent">
-      </div> */}
-
-      {/* <ShortInfo className="farzi"></ShortInfo> */}
       <Page></Page>
       <Projects projects={ProjectsData}></Projects>
+      <div className="ftr"></div>
+      <Footar></Footar>
       <Footer></Footer>
     </>
   );
@@ -75,13 +62,11 @@ export function Page() {
           </div>
           <div className="ph">
             <div className="photo"></div>
-            <div className="cr"></div>
+            {/* <div className="cr"></div> */}
           </div>
         </div>
 
-        <div className="dsr">
-          <CodePage></CodePage>
-        </div>
+        <div className="dsr">{/* <CodePage></CodePage> */}</div>
       </div>
     </>
   );
@@ -90,46 +75,12 @@ export function Page() {
 export function Footer() {
   return (
     <>
-      <footer className="ftr">
-        <Form></Form>
-
-        <div className="background">
-          <div className="opc-cr">{meshs()}</div>
-        </div>
-      </footer>
-
       <div className="all-right">
-        <p>© 2024 Mahtāb Shah. All rights reserved.</p>
-
-        <div class="social-media">
-          <a
-            href="https://www.linkedin.com/in/mahtab-shah916"
-            target="_blank"
-            aria-label="LinkedIn"
-          >
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a
-            href="https://www.twitter.com/yourprofile"
-            target="_blank"
-            aria-label="Twitter"
-          >
-            <i class="fab fa-twitter"></i>
-          </a>
-
-          {/* href="https://www.instagram.com/cre8.hystory" */}
-          <a target="_blank" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-
-          <a
-            href="https://youtube.com/@engineeringoncoding?si=WYyDjPbvg5FPszYB"
-            target="_blank"
-            aria-label="YouTube"
-          >
-            <i class="fab fa-youtube"></i>
-          </a>
+        <div className="msgSocialMedia">
+          <Massage></Massage>
+          <SocialMedia></SocialMedia>
         </div>
+        <p>Developed by Mahtāb Shah.</p>
       </div>
     </>
   );
@@ -139,7 +90,6 @@ const ProjectsData = {
   titles: [
     "WEB COLOR PALLET APPLICATION",
     "LIVE VISUAL STUDIO CODE (LVSC)",
-
     "SORTING VISUALIZER WEB APP",
   ],
 
@@ -221,3 +171,96 @@ export function Projects({ projects }) {
   );
 }
 
+import "./msg.css";
+export function Massage() {
+  return (
+    <>
+      <div className="msgbox">
+        <form>
+          <div className="ms-bar ms-bar3"></div>
+          <div className="ms-what-sl">
+            <b>Massage</b>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">
+              Email address
+            </label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+            <div id="emailHelp" class="form-text">
+              We'll never share your email with anyone else.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">
+              Send me a massage!
+            </label>
+            <textarea
+              type="password"
+              class="form-control textarea"
+              id="exampleInputPassword1"
+              spellCheck="false"
+            />
+          </div>
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="exampleCheck1"
+            />
+            <label class="form-check-label" for="exampleCheck1">
+              Check me out
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            Submit
+          </button>
+        </form>
+      </div>
+    </>
+  );
+}
+
+export function SocialMedia() {
+  return (
+    <>
+      <div className="socil-side">
+        <div class="social-media">
+          <a
+            href="https://www.linkedin.com/in/mahtab-shah916"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://www.twitter.com/yourprofile"
+            target="_blank"
+            aria-label="Twitter"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+
+          {/* href="https://www.instagram.com/cre8.hystory" */}
+          <a target="_blank" aria-label="Instagram">
+            <i class="fab fa-github"></i>
+          </a>
+
+          <a
+            href="https://youtube.com/@engineeringoncoding?si=WYyDjPbvg5FPszYB"
+            target="_blank"
+            aria-label="YouTube"
+          >
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+        <div className="afterSslmd"></div>
+      </div>
+    </>
+  );
+}

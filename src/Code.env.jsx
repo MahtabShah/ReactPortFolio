@@ -2,36 +2,39 @@ import "./Code.env.modules.css";
 import "./App.css";
 
 export default function CodePage() {
+  const terminal = {
+    header: ["Code Editor", "Terminal"],
+    content: [
+      `function About() {
+      Console.log("Hi! My Name is Mahtab Shah, 
+      I'm from India. I am
+      purshuing B. Tech. in Electrical Engineering.
+      When i am not coding, usually i like to write poetry.");
+
+About();`,
+      `
+      $ npm start
+      Starting the development server...
+      Compiled successfully!`,
+    ],
+  };
+
   return (
     <>
       <div class="development-environment">
-        <div class="code-editor">
-          <div class="editor-header">Code Editor</div>
-          <div class="code-content">
-            <pre>
-              <code>
-                {`function Intro() {
-  console.log(Hello...!
-  My Name is Mahtab Shah \n  a web developer);
-}
-  
-Intro();`}
-              </code>
-            </pre>
+        {terminal.header.map((title, i) => (
+          <div class="code-editor">
+            <div class="editor-header">{title}</div>
+            <div class="code-content">
+              {/* <pre> */}
+              <code>{terminal.content[i]}</code>
+              {/* </pre> */}
+            </div>
           </div>
-        </div>
-
-        <div class="terminal">
-          <div class="terminal-header">Terminal</div>
-          <div class="terminal-content">
-            <p>$ npm start</p>
-            <p>Starting the development server...</p>
-            <p>Compiled successfully!</p>
-          </div>
-        </div>
+        ))}
       </div>
 
-      <IntroCode></IntroCode>
+      {/* <IntroCode></IntroCode> */}
     </>
   );
 }
