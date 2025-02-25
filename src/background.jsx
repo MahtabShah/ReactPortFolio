@@ -227,39 +227,35 @@ export function Massage() {
 }
 
 export function SocialMedia() {
+  const social = {
+    name: ["linkedin", "twitter", "github", "youtube"],
+    links: [
+      "https://www.linkedin.com/in/mahtab-shah916",
+      "https://www.twitter.com/yourprofile",
+      "https://www.github.com/MahtabShah",
+      "https://youtube.com/@engineeringoncoding?si=WYyDjPbvg5FPszYB",
+    ],
+  };
   return (
     <>
       <div className="socil-side">
-        <div class="social-media">
-          <a
-            href="https://www.linkedin.com/in/mahtab-shah916"
-            target="_blank"
-            aria-label="LinkedIn"
-          >
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a
-            href="https://www.twitter.com/yourprofile"
-            target="_blank"
-            aria-label="Twitter"
-          >
-            <i class="fab fa-twitter"></i>
-          </a>
-
-          {/* href="https://www.instagram.com/cre8.hystory" */}
-          <a target="_blank" aria-label="Instagram">
-            <i class="fab fa-github"></i>
-          </a>
-
-          <a
-            href="https://youtube.com/@engineeringoncoding?si=WYyDjPbvg5FPszYB"
-            target="_blank"
-            aria-label="YouTube"
-          >
-            <i class="fab fa-youtube"></i>
-          </a>
+        <div className="belowIcons">
+          <h2>Connect US</h2>
         </div>
-        <div className="afterSslmd"></div>
+
+        <div className="social-media">
+          {social.name.map((nm, i) => (
+            <a
+              href={social.links[i]}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={nm}
+              key={i}
+            >
+              <i className={`fab fa-${nm}`}></i>
+            </a>
+          ))}
+        </div>
       </div>
     </>
   );
