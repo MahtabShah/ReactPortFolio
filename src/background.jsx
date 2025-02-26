@@ -14,76 +14,12 @@ export default function Background() {
     <>
       <Page></Page>
       <Projects projects={ProjectsData}></Projects>
-      <div className="ftr">
-        <SkillsSection></SkillsSection>
-      </div>
+      <div className="ftr"></div>
       <Footar></Footar>
       <Footer></Footer>
     </>
   );
 }
-
-import React from "react";
-import { motion } from "framer-motion";
-
-// Skill data (you can replace this with your own data)
-const skills = [
-  { name: "HTML", logo: "path-to-html-logo.png" },
-  { name: "CSS", logo: "path-to-css-logo.png" },
-  { name: "JavaScript", logo: "path-to-js-logo.png" },
-  { name: "React", logo: "path-to-react-logo.png" },
-  { name: "Node.js", logo: "path-to-nodejs-logo.png" },
-  { name: "MongoDB", logo: "path-to-mongodb-logo.png" },
-  { name: "Python", logo: "path-to-python-logo.png" },
-  { name: "Git", logo: "path-to-git-logo.png" },
-];
-
-// Animation variants for Framer Motion
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2, // Stagger animation for each child
-    },
-  },
-};
-
-const skillVariants = {
-  hidden: { y: 50, opacity: 0 },
-  visible: { y: 0, opacity: 1 },
-  hover: { scale: 1.1, transition: { type: "spring", stiffness: 300 } },
-};
-
-const SkillsSection = () => {
-  return (
-    <motion.div
-      className="skills-section"
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
-    >
-      <h1 className="section-title">Full Stack Developer Skills</h1>
-      <div className="skills-grid">
-        {skills.map((skill, index) => (
-          <motion.div
-            key={index}
-            className="skill-card"
-            variants={skillVariants}
-            whileHover="hover"
-          >
-            <img
-              src={skill.logo}
-              alt={`${skill.name} Logo`}
-              className="skill-logo"
-            />
-            <p className="skill-name">{skill.name}</p>
-          </motion.div>
-        ))}
-      </div>
-    </motion.div>
-  );
-};
 
 export function Page() {
   let header = {
