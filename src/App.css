@@ -27,11 +27,11 @@
   --wh-clr: rgb(255, 255, 255);
   --t-clr1: rgb(203, 197, 197);
   --t-clr2: rgb(20, 20, 20);
-  --fr-clr: #2b2b9d;
+  --fr-clr: #090994;
 }
 
 :root {
-  --hdr-clr: #0c2766;
+  --hdr-clr: #001e64;
   --u-bdr: 1px solid rgb(159, 158, 158);
   --u-code-bg: #d7dbdc;
   --u-whclr: #ccc;
@@ -150,11 +150,12 @@ body {
   );
   padding-bottom: 50px;
   background-color: var(--hdr-clr);
-  background: url(https://i.pinimg.com/originals/83/be/32/83be325e2d434d410339a95622877f70.jpg);
+  /* background: url(https://i.pinimg.com/originals/83/be/32/83be325e2d434d410339a95622877f70.jpg); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
+  background: linear-gradient(to top, rgb(2, 2, 49) 30%, rgb(1, 4, 31));
 }
 
 .introduction {
