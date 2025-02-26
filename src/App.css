@@ -155,7 +155,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
-  background: linear-gradient(to bottom, var(--hdr-clr) 30%, rgb(1, 4, 31));
+  background: linear-gradient(to bottom, var(--hdr-clr), rgb(1, 4, 31));
 }
 
 .introduction {
