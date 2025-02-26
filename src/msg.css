@@ -24,6 +24,7 @@
   box-shadow: 0 0 2px rgb(134, 132, 132);
   flex-grow: 1;
   max-width: 760px;
+  padding: 3%;
 }
 
 .msgbox form {
@@ -88,6 +89,15 @@
     #3f9ffe,
     #3c64bc,
     rgb(78, 78, 255)
+  );
+}
+
+.social-media a i:hover {
+  background: repeating-linear-gradient(
+    120deg,
+    rgb(78, 78, 255),
+    #3c64bc,
+    #3f9ffe
   );
 }
 
