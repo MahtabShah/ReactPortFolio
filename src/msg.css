@@ -1,11 +1,14 @@
 .all-right {
-  min-height: 94vh;
+  /* min-height: 94vh; */
   color: var(--t-clr1);
   display: flex;
   flex-direction: column;
   justify-content: end;
   background-color: var(--hdr-clr);
   overflow: hidden;
+  padding-top: 80px;
+  background: repeating-linear-gradient(90deg, #831ddc, #7c1bd1);
+
   /* border: 2px solid red; */
   /* background-size: 100vw; */
 }

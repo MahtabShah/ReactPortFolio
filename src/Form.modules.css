@@ -82,5 +82,6 @@ form::after {
 }
 
 #emailHelp {
+  all: initial;
   color: rgb(204, 200, 200);
 }

@@ -3,7 +3,7 @@
   min-height: 90vh;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(120deg, #7189fe, #40c9ec);
+  background: linear-gradient(120deg, #e271fe, #6e40ec);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,7 +21,14 @@
     #6a43f7,
     rgb(85, 190, 243)
   );
-  clip-path: polygon(60% 0%, 36% 100%, 100% 100%, 100% 0%);
+
+  background: repeating-linear-gradient(
+    to bottom,
+    rgb(134, 178, 245),
+    #d2d5f9,
+    rgba(211, 223, 251, 0.938)
+  );
+  /* clip-path: polygon(60% 0%, 36% 100%, 100% 100%, 100% 0%); */
 
   /* overflow: hidden; */
 }
@@ -61,4 +68,101 @@
   background: #6f71f8;
   transform: rotateZ(45deg);
   z-index: 3;
+}
+
+.BgParent {
+  background: linear-gradient(80deg, #e4cefc, #a55bff);
+}
+
+.bgproject {
+  position: relative;
+  /* height: 100vh; */
+  /* border: 2px solid red; */
+  overflow: hidden;
+  /* background-attachment: fixed; */
+  /* background: repeating-linear-gradient(140deg, rgb(202, 128, 239), #c8a2f7); */
+}
+
+.tr {
+  /* border: 2px solid red; */
+
+  width: 44vw;
+  height: 44vh;
+
+  /* transform: rotateZ(-45deg); */
+  position: absolute;
+  clip-path: polygon(0% 100%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.tr1 {
+  bottom: 0;
+  right: 0;
+  background: repeating-linear-gradient(140deg, rgb(241, 39, 227) 30%, #1d33fd);
+}
+
+.tr2 {
+  bottom: -8vw;
+  right: -8vw;
+  background: repeating-linear-gradient(
+    140deg,
+    rgba(245, 18, 230, 0.755) 30%,
+    #1d33fd
+  );
+}
+
+.tr3 {
+  bottom: -15vw;
+  right: -15vw;
+  background: repeating-linear-gradient(0deg, rgb(246, 22, 231), #1d33fd);
+}
+
+.fsqr {
+  /* border: 2px solid red; */
+
+  width: 180px;
+  height: 180px;
+  bottom: 400px;
+  right: 120px;
+  transform: rotateZ(-45deg);
+  position: absolute;
+  background: repeating-linear-gradient(
+    340deg,
+    #9407e67c,
+    rgba(202, 3, 189, 0.304)
+  );
+  z-index: 2;
+}
+
+.trsqr {
+  /* border: 2px solid red; */
+
+  width: 700px;
+  height: 1000px;
+  bottom: 10px;
+  right: -600px;
+  transform: rotateZ(-45deg);
+  position: absolute;
+  background: repeating-linear-gradient(
+    60deg,
+    rgba(230, 13, 216, 0.61),
+    rgba(230, 13, 216, 0.586) 30%,
+    #8718ef9b,
+    #8801f022
+  );
+  box-shadow: 0 0 400px #c035e0;
+  filter: blur(2px);
+}
+
+.tlsqr {
+  width: 1000px;
+  height: 1000px;
+  top: -400px;
+  left: -1000px;
+  transform: rotateZ(-45deg);
+  position: absolute;
+  background: repeating-linear-gradient(
+    260deg,
+    #6626fb91,
+    rgba(230, 13, 216, 0.662)
+  );
 }

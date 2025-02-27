@@ -8,13 +8,25 @@ import img3 from "./asset/Screenshot 2025-01-27 195704.png";
 
 // import Achive from "./AchiveCirtified";
 import Footar from "./Footer";
+import Skills from "./Skills";
 
 export default function Background() {
   return (
     <>
       <Page></Page>
-      <Projects projects={ProjectsData}></Projects>
-      <div className="ftr"></div>
+      <div className="bgproject">
+        {/* <div className="tlsqr"></div>s */}
+        {/* <div className="tr tr1"></div> */}
+        {/* <div className="tr tr2"></div> */}
+        {/* <div className="tr tr3"></div> */}
+        <div className="fsqr"></div>
+        <div className="trsqr"></div>
+        <Projects projects={ProjectsData}></Projects>
+      </div>
+
+      <div className="ftr">
+        <Skills></Skills>
+      </div>
       <Footar></Footar>
       <Footer></Footer>
     </>
@@ -66,9 +78,69 @@ export function Page() {
           </div>
         </div>
 
-        <div className="dsr">{/* <CodePage></CodePage> */}</div>
+        <div className="dsr pfbg">
+          <Cube
+            dim={{ width: "40px", height: "40px", left: "10%", top: "10%" }}
+          />
+
+          <Cube
+            dim={{
+              width: "15vw",
+              height: "15vw",
+              right: "100px",
+              bottom: "200px",
+            }}
+          />
+
+          <div className="cricle"></div>
+          <div className="aboveCircle"></div>
+          <div className="bottomCircle"></div>
+          <div className="midCircle"></div>
+          <div className="rtcr"></div>
+          <div className="ssCr"></div>
+          <div className="sCr"></div>
+        </div>
       </div>
     </>
+  );
+}
+
+export function Cube({ dim }) {
+  return (
+    <div
+      className="cube"
+      style={{
+        width: dim.width,
+        height: dim.height,
+        left: dim.left,
+        right: dim.right,
+        top: dim.top,
+        bottom: dim.bottom,
+      }}
+    >
+      {["front", "back", "left", "right", "top", "bottom"].map((side) => (
+        <div
+          key={side}
+          className={`face ${side}`}
+          style={{
+            width: dim.width,
+            height: dim.height,
+            transform:
+              side === "front"
+                ? `translateZ(calc(${dim.width} / 2))`
+                : side === "back"
+                ? `rotateY(180deg) translateZ(calc(${dim.width} / 2))`
+                : side === "left"
+                ? `rotateY(-90deg) translateZ(calc(${dim.width} / 2))`
+                : side === "right"
+                ? `rotateY(90deg) translateZ(calc(${dim.width} / 2))`
+                : side === "top"
+                ? `rotateX(90deg) translateZ(calc(${dim.width} / 2))`
+                : `rotateX(-90deg) translateZ(calc(${dim.width} / 2))`, // bottom face
+          }}
+        ></div>
+      ))}
+    </div>
   );
 }
 
@@ -133,7 +205,7 @@ export function Projects({ projects }) {
     <div className="proj-c">
       <span
         style={{
-          color: "var(--t-clr1)",
+          color: "#333",
           position: "absolute",
         }}
       >
@@ -192,7 +264,7 @@ export function Massage() {
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
             />
-            <div id="emailHelp" class="form-text">
+            <div id="emailHelp" class="form-text" style={{ color: "#ded" }}>
               We'll never share your email with anyone else.
             </div>
           </div>
