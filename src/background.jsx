@@ -89,7 +89,7 @@ export function Page() {
               width: "15vw",
               height: "15vw",
               right: "100px",
-              bottom: "200px",
+              bottom: "180px",
             }}
           />
 
