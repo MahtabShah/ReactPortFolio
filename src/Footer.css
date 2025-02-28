@@ -1,6 +1,6 @@
 .BgParent {
   /* border: 2px solid red; */
-  min-height: 90vh;
+  min-height: 80vh;
   position: relative;
   overflow: hidden;
   display: flex;
