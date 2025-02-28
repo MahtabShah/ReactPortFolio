@@ -211,9 +211,9 @@ export function Projects({ projects }) {
     <div className="proj-c">
       <span
         style={{
-          color: "#333",
           position: "absolute",
         }}
+        className="nmProject"
       >
         PROJECTS
       </span>
