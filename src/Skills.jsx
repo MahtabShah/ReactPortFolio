@@ -36,7 +36,7 @@ export default function Skills() {
             style={{
               left: "-125px",
               bottom: "-225px",
-              filter: "blur(5px)",
+              filter: "blur(3px)",
               width: "500px",
               height: "500px",
             }}
@@ -46,7 +46,7 @@ export default function Skills() {
             style={{
               left: "calc(100% - 190px)",
               bottom: "calc(100% - 190px)",
-              filter: "blur(2px)",
+              filter: "blur(1px)",
               width: "400px",
               height: "400px",
             }}

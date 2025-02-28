@@ -9,6 +9,7 @@ import img3 from "./asset/Screenshot 2025-01-27 195704.png";
 // import Achive from "./AchiveCirtified";
 import Footar from "./Footer";
 import Skills from "./Skills";
+import { Shape } from "./Skills";
 
 export default function Background() {
   return (
@@ -239,6 +240,16 @@ export function Projects({ projects }) {
           </div>
         </>
       ))}
+
+      <Shape
+        style={{
+          left: "calc(100% - 190px)",
+          top: "calc(100% - 190px)",
+          filter: "blur(1px)",
+          width: "400px",
+          height: "400px",
+        }}
+      ></Shape>
     </div>
   );
 }

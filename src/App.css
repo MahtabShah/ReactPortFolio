@@ -248,15 +248,18 @@ body {
   background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcCv9c9Z-i2MGzy8XYg0Gj1DJx8CiKye0fVg&s);
   background: url(https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjEwMTYtYy0wOF8xLWtzaDZtemEzLmpwZw.jpg); */
   background: repeating-linear-gradient(
-    100deg,
-    #895ef0b8,
-    rgb(230 132 250 / 98%)
+    180deg,
+    #d8cef1b8,
+    #d8cef1b8,
+    rgb(241, 209, 250),
+    rgb(241, 209, 250),
+    rgb(247, 246, 248)
   );
   z-index: 4;
   /* background-position: center; */
   /* background-repeat: no-repeat; */
-  background-size: cover;
-  background-attachment: fixed;
+  /* background-size: cover; */
+  /* background-attachment: fixed; */
   /* background-size: 100vw 100vh; */
   /* border: 2px solid red; */
   /* height: 100vh; */
@@ -280,7 +283,7 @@ body {
   margin: 30px 3%;
   padding: 4px 16px;
   color: #272828;
-  border: 1px solid rgba(11, 48, 169, 0.5);
+  /* border: 1px solid rgba(11, 48, 169, 0.901); */
   z-index: 5;
 }
 
@@ -331,6 +334,7 @@ body {
   }
   .m {
     flex-direction: column-reverse;
+    min-height: none;
   }
 
   .photo {

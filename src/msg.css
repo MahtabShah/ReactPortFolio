@@ -24,7 +24,7 @@
 
 .msgbox {
   /* border: 2px solid rgb(243, 8, 8); */
-  box-shadow: 0 0 2px rgb(134, 132, 132);
+  box-shadow: 0 0 2px rgb(194, 190, 190);
   flex-grow: 1;
   max-width: 760px;
   padding: 3%;
@@ -54,7 +54,7 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  border: 1px solid rgba(110, 111, 120, 0.441);
+  border: 1px solid rgba(132, 133, 140, 0.789);
   padding: 20px;
 }
 
@@ -86,25 +86,25 @@
   justify-content: center;
   align-items: center;
   color: rgb(215, 197, 197);
-  border: 2px solid rgb(122, 131, 185);
+  border: 2px solid rgb(213, 101, 247);
   max-width: 80px;
   /* width: clamp(20px, 3vw, 80px); */
   border-radius: 30% 0;
   aspect-ratio: 1/1;
   background: repeating-linear-gradient(
     120deg,
-    #3f9ffe,
-    #3c64bc,
-    rgb(78, 78, 255)
+    #8c05f4,
+    #a515d5,
+    rgb(255, 78, 205)
   );
 }
 
 .social-media a i:hover {
   background: repeating-linear-gradient(
     120deg,
-    rgb(78, 78, 255),
-    #3c64bc,
-    #3f9ffe
+    rgb(244, 3, 228),
+    #c003f5,
+    #ac04f4
   );
 }
 
