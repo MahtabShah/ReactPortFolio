@@ -79,7 +79,7 @@ body {
   display: flex;
   /* border: 3px solid red; */
   background: linear-gradient(to bottom, #7115c2, #9438e6);
-  margin-top: 40px;
+  margin-top: 20px;
   position: relative;
   overflow: hidden;
   flex-flow: column nowrap;

@@ -40,8 +40,8 @@ function GoTheSection(id) {
 
 export function Page() {
   let header = {
-    items: ["Mahtab Shah", "Home", "About", "Contact", "Get resume", "Project"],
-    ids: ["nm", "home", "about", "contact", "get", "project"],
+    items: ["Mahtab Shah", "Home", "Contact", "Get resume", "Project"],
+    ids: ["nm", "home", "contact", "get", "project"],
   };
 
   return (
