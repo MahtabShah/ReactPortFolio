@@ -15,7 +15,7 @@ export default function Background() {
   return (
     <>
       <Page></Page>
-      <div className="bgproject">
+      <div className="bgproject project">
         {/* <div className="tlsqr"></div>s */}
         {/* <div className="tr tr1"></div> */}
         {/* <div className="tr tr2"></div> */}
@@ -34,21 +34,26 @@ export default function Background() {
   );
 }
 
+function GoTheSection(id) {
+  document.querySelector(`.${id}`)?.scrollIntoView({ behavior: "smooth" });
+}
+
 export function Page() {
   let header = {
-    items: ["Mahtab Shah", "Home", "About", "Contact", "Get resume"],
-    ids: ["nm", "home", "about", "contact", "get"],
+    items: ["Mahtab Shah", "Home", "About", "Contact", "Get resume", "Project"],
+    ids: ["nm", "home", "about", "contact", "get", "project"],
   };
 
   return (
     <>
-      <div className="p">
+      <div className="p home">
         <div className="hr">
           {header.items.map((item, index) => (
             <span
               className="header-item"
               id={header.ids[index]}
               key={header.ids[index]}
+              onClick={() => GoTheSection(header.ids[index])} // Pass function reference
             >
               {item}
             </span>
@@ -258,7 +263,7 @@ import "./msg.css";
 export function Massage() {
   return (
     <>
-      <div className="msgbox">
+      <div className="msgbox contact">
         <form>
           <div className="ms-bar ms-bar3"></div>
           <div className="ms-what-sl">
