@@ -246,15 +246,17 @@ export function Projects({ projects }) {
         </>
       ))}
 
-      <Shape
-        style={{
-          left: "calc(100% - 190px)",
-          top: "calc(100% - 190px)",
-          filter: "blur(1px)",
-          width: "400px",
-          height: "400px",
-        }}
-      ></Shape>
+      <div className="projectbrCr">
+        <Shape
+          style={{
+            left: "calc(100% - 190px)",
+            top: "calc(100% - 190px)",
+            filter: "blur(1px)",
+            width: "400px",
+            height: "400px",
+          }}
+        ></Shape>
+      </div>
     </div>
   );
 }

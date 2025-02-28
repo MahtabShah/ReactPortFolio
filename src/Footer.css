@@ -165,3 +165,22 @@
     rgba(230, 13, 216, 0.662)
   );
 }
+
+@media (max-width: 800px) {
+  .ftr {
+    background: linear-gradient(
+      to bottom,
+      rgb(251, 241, 254) 30%,
+      rgb(225, 229, 237)
+    );
+  }
+
+  .trsqr,
+  .fsqr {
+    display: none;
+  }
+
+  .projectbrCr {
+    display: none;
+  }
+}
