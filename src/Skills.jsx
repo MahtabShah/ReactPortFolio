@@ -24,8 +24,8 @@ export default function Skills() {
           dim={{
             width: "40px",
             height: "40px",
-            left: "24%",
-            top: "64%",
+            left: "26%",
+            top: "70%",
           }}
         />
 
