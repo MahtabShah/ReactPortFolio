@@ -53,15 +53,22 @@ export default function Skills() {
           ></Shape>
         </div>
       </div>
+
+      <div className="SVGlogo"></div>
     </>
   );
 }
 
-export function SkillCmponent({ ht, wd, nm }) {
+export function SkillCmponent({ ht, wd, nm, svg }) {
   return (
-    <div className="skill" style={{ height: ht, width: wd }}>
-      {nm}
-    </div>
+    <>
+      <div className="skill" style={{ height: ht, width: wd }}>
+        <div className="divSvg">
+          <embed type="image/svg+xml" src={`./src/asset/${svg}.svg`} />
+        </div>
+        <span>{nm}</span>
+      </div>
+    </>
   );
 }
 
@@ -69,18 +76,33 @@ export function WheelSkill() {
   const nms = [
     "HTML",
     "CSS",
+    "Tailwind",
     "Bootstrap",
     "JavaScript",
-    "React.js",
-    "C/C++",
     "Python",
+    "React.js",
+    "C",
+    "C++",
     "Node.js",
+  ];
+
+  const SVGs = [
+    "html-1",
+    "css-3",
+    "tailwind-css-2",
+    "bootstrap-5-1",
+    "javascript-1",
+    "python-5",
+    "react-2",
+    "c-1",
+    "c",
+    "nodejs-3",
   ];
 
   return (
     <div className="wheelCr">
       {nms.map((item, index) => (
-        <SkillCmponent key={index} wd="100px" ht="100px" nm={item} />
+        <SkillCmponent key={index} wd="" ht="" nm={item} svg={SVGs[index]} />
       ))}
 
       <div className="verticleLine"></div>
