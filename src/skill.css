@@ -103,9 +103,9 @@
   background: repeating-radial-gradient(
     rgb(147, 19, 238),
     #9932f2f2,
-    #d8a9fff2
+    #bf7ef5f2
   );
-  box-shadow: 0 0 100px rgb(137, 0, 249);
+  box-shadow: 0 0 80px rgb(137, 0, 249);
   /* opacity: 0.6; */
   /* backdrop-filter: blur(1000px); */
 }

@@ -5,10 +5,14 @@ import img2 from "./AWhatsApp Image 2025-02-24 at 10.22.17_04ea43b1.jpg";
 export default function Achive() {
   const img = [img1, img2];
   return (
-    <div className="Achived-Section">
-      <Cirtificate images={img[0]} style={{ alignSelf: "end" }} />
-      <Cirtificate images={img[1]} />
-    </div>
+    <>
+      <div className="Achived-Section">
+        <Cirtificate images={img[0]} style={{ alignSelf: "end" }} />
+        <Cirtificate images={img[1]} />
+      </div>
+
+      <div className="achiveBg"></div>
+    </>
   );
 }
 

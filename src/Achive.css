@@ -15,6 +15,8 @@
   justify-content: center;
   transition: transform 0.3s;
   flex-grow: 1;
+  aspect-ratio: 11/8;
+  border-radius: 10px;
 }
 
 .img {
@@ -22,6 +24,74 @@
   border-radius: 3px;
   max-width: 600px;
   box-shadow: 0 0 5px rgba(28, 47, 53, 0.836);
+}
+
+.achiveBg {
+  /* border: 2px solid red; */
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  background-color: rgb(249, 239, 252);
+}
+
+.abtCate {
+  /* border: 2px solid red; */
+  padding: 20px 0;
+}
+
+.Achmph,
+.Rcft,
+.abtCate {
+  width: 33vw;
+  /* border: 2px solid red; */
+  position: relative;
+}
+
+.Rcft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.abtCate {
+  padding-left: calc(
+    calc(66vw - 10px) - calc(min(600px, 40vw)) - clamp(30px, 20vw, 600px)
+  );
+}
+
+.abtp {
+  padding: 10px;
+  color: rgb(23, 23, 23);
+}
+
+.Achmph {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.f2c,
+.f1c {
+  /* border: 2px solid red; */
+  border-radius: 10px;
+  aspect-ratio: 11/8;
+  width: calc(min(600px, 40vw));
+}
+
+.f1c {
+  /* background-color: aqua; */
+  position: absolute;
+  left: clamp(30px, 20vw, 600px);
+  top: 40px;
+}
+
+.f2c {
+  position: absolute;
+  /* background: rgb(69, 69, 214); */
+  right: clamp(30px, 20vw, 600px);
+  bottom: 60px;
+  /* border: 2px solid red; */
 }
 
 @media (max-width: 700px) {
@@ -37,5 +107,38 @@
   .BgParent {
     /* border: 2px solid red; */
     min-height: none;
+  }
+
+  .Achmph,
+  .Rcft,
+  .abtCate {
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  .achiveBg {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .f1c {
+    top: clamp(calc(100% - 20vw), 50vw, -300px);
+    left: clamp(30px, 10vw, 100px);
+    width: calc(min(500px, 65vw));
+    position: relative;
+  }
+
+  .f2c {
+    position: relative;
+    width: calc(min(500px, 65vw));
+    right: clamp(30px, 10vw, 100px);
+    bottom: clamp(calc(100% - 20vw), 50vw, -300px);
+    align-self: end;
+    margin-bottom: 40px;
+  }
+
+  .abtCate {
+    padding-left: calc(clamp(30px, 10vw, 100px) - 10px);
   }
 }

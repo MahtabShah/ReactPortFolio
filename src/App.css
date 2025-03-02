@@ -326,8 +326,8 @@ body {
    */
   background: linear-gradient(
     to bottom,
-    rgb(251, 241, 254) 30%,
-    rgb(225, 229, 237)
+    rgb(246 215 255) 30%,
+    rgb(245 248 255)
   );
   /* 
   background: linear-gradient(to bottom, rgb(82, 9, 155) 30%, rgb(76, 5, 169)); */
