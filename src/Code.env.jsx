@@ -21,11 +21,11 @@ About();`,
 
   return (
     <>
-      <div class="development-environment">
+      <div className="development-environment">
         {terminal.header.map((title, i) => (
-          <div class="code-editor">
-            <div class="editor-header">{title}</div>
-            <div class="code-content">
+          <div className="code-editor">
+            <div className="editor-header">{title}</div>
+            <div className="code-content">
               {/* <pre> */}
               <code>{terminal.content[i]}</code>
               {/* </pre> */}
