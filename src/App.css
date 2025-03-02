@@ -198,7 +198,7 @@ body {
   min-height: clamp(100px, calc(100px + 20vw), 300px);
   margin-right: calc(100px + 8vw);
   margin-top: calc(10px + 4vw);
-  background: url("./src/asset/Screenshot_2025-03-01_154824-removebg-preview.png");
+  background: url("./src/Screenshot_2025-03-01_154824-removebg-preview.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: clamp(100px, calc(100px + 20vw), 300px);
