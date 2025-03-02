@@ -1,8 +1,20 @@
+:root {
+  --ach-padding: 3%;
+  --ach-gap: 10%;
+  --ach-border-radius: 10px;
+  --ach-aspect-ratio: 11/8;
+  --ach-bg-color: rgb(249, 239, 252);
+  --ach-box-shadow: 0 0 5px rgba(28, 47, 53, 0.836);
+  --ach-width-max: 600px;
+  --ach-width-min: 40vw;
+  --ach-width-clamp: calc(min(var(--ach-width-max), var(--ach-width-min)));
+  --ach-position-left: clamp(30px, 20vw, 600px);
+  --ach-position-right: clamp(30px, 20vw, 600px);
+}
+
 .Achived-Section {
-  /* border: 2px solid red; */
-  /* background: repeating-linear-gradient(to bottom, #bfbdda, #a6bddf, #c49fc8); */
-  padding: 3%;
-  gap: 10%;
+  padding: var(--ach-padding);
+  gap: var(--ach-gap);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   position: relative;
@@ -10,41 +22,40 @@
 }
 
 .Cirtificate {
-  /* border: 2px solid red; */
   display: flex;
   justify-content: center;
   transition: transform 0.3s;
   flex-grow: 1;
-  aspect-ratio: 11/8;
-  border-radius: 10px;
+  aspect-ratio: var(--ach-aspect-ratio);
+  border-radius: var(--ach-border-radius);
 }
 
 .img {
   width: 100%;
   border-radius: 3px;
-  max-width: 600px;
-  box-shadow: 0 0 5px rgba(28, 47, 53, 0.836);
+  max-width: var(--ach-width-max);
+  box-shadow: var(--ach-box-shadow);
 }
 
 .achiveBg {
-  /* border: 2px solid red; */
   height: 120vh;
   position: relative;
   overflow: hidden;
   display: flex;
-  background-color: rgb(249, 239, 252);
+  background-color: var(--ach-bg-color);
 }
 
 .abtCate {
-  /* border: 2px solid red; */
   padding: 20px 0;
+  padding-left: calc(
+    calc(66vw - 10px) - var(--ach-width-clamp) - var(--ach-position-left)
+  );
 }
 
 .Achmph,
 .Rcft,
 .abtCate {
   width: 33vw;
-  /* border: 2px solid red; */
   position: relative;
 }
 
@@ -52,12 +63,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.abtCate {
-  padding-left: calc(
-    calc(66vw - 10px) - calc(min(600px, 40vw)) - clamp(30px, 20vw, 600px)
-  );
 }
 
 .abtp {
@@ -73,25 +78,21 @@
 
 .f2c,
 .f1c {
-  /* border: 2px solid red; */
-  border-radius: 10px;
-  aspect-ratio: 11/8;
-  width: calc(min(600px, 40vw));
+  border-radius: var(--ach-border-radius);
+  aspect-ratio: var(--ach-aspect-ratio);
+  width: var(--ach-width-clamp);
 }
 
 .f1c {
-  /* background-color: aqua; */
   position: absolute;
-  left: clamp(30px, 20vw, 600px);
+  left: var(--ach-position-left);
   top: 40px;
 }
 
 .f2c {
   position: absolute;
-  /* background: rgb(69, 69, 214); */
-  right: clamp(30px, 20vw, 600px);
+  right: var(--ach-position-right);
   bottom: 60px;
-  /* border: 2px solid red; */
 }
 
 @media (max-width: 700px) {
@@ -102,11 +103,6 @@
 
   .Cirtificate {
     margin: 4% 0;
-  }
-
-  .BgParent {
-    /* border: 2px solid red; */
-    min-height: none;
   }
 
   .Achmph,

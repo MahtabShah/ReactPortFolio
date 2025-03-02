@@ -35,7 +35,7 @@ export default function Skills() {
           <Shape
             style={{
               left: "-125px",
-              bottom: "-225px",
+              bottom: "-285px",
               filter: "blur(3px)",
               width: "500px",
               height: "500px",
