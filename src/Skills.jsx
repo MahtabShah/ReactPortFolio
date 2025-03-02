@@ -64,7 +64,7 @@ export function SkillCmponent({ ht, wd, nm, svg }) {
     <>
       <div className="skill" style={{ height: ht, width: wd }}>
         <div className="divSvg">
-          <embed type="image/svg+xml" src={`./src/${svg}.svg`} />
+          <object type="image/svg+xml" data={`./src/${svg}.svg`}></object>
         </div>
         <span>{nm}</span>
       </div>
