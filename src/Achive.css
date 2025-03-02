@@ -38,7 +38,7 @@
 }
 
 .achiveBg {
-  height: 120vh;
+  min-height: 100vh;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -95,7 +95,9 @@
   bottom: 60px;
 }
 
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
+  /* Your styles here */
+
   .Achived-Section {
     display: block;
     padding: 4%;
