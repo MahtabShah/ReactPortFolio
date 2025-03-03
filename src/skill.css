@@ -128,7 +128,8 @@
   justify-content: center;
 }
 
-iframe {
+iframe,
+svg {
   height: 60px;
   width: 50px;
   display: flex;
