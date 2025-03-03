@@ -64,13 +64,23 @@ export function SkillCmponent({ ht, wd, nm, svg }) {
     <>
       <div className="skill" style={{ height: ht, width: wd }}>
         <div className="divSvg">
-          <embed type="image/svg+xml" src={`./src/asset/${svg}.svg`} />
+          <iframe src={`./src/asset/${svg}.svg`} frameborder="0"></iframe>
         </div>
         <span>{nm}</span>
       </div>
     </>
   );
 }
+
+function Logoiframe() {
+  document.querySelectorAll(".divSvg iframe").forEach((e) => {
+    const ifr = e.contentDocument || e.contentWindow.document;
+    ifr.querySelector("svg").style.width = "50px";
+    ifr.querySelector("svg").style.height = "60px";
+  });
+}
+
+Logoiframe();
 
 export function WheelSkill() {
   const nms = [
