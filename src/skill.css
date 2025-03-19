@@ -5,16 +5,15 @@
   --skl-font-weight: 700;
   --skl-font-color: aliceblue;
   --skl-bg-color: repeating-radial-gradient(
-    rgb(147, 19, 238),
-    #9932f2f2,
-    #bf7ef5f2
+    rgba(197, 115, 255, 0.817),
+    #cd97ffc0
   );
   --skl-box-shadow: 0 0 80px rgb(137, 0, 249);
   --skl-border-color: rgb(191, 178, 178);
   --skl-text-shadow: 2px 2px 14px #dfd2d2;
   --skl-title-color: rgb(82, 8, 109);
   --skl-desc-color: rgb(56, 57, 58);
-  --skl-info-border: 2px solid rgb(237, 6, 233);
+  --skl-info-border: 2px solid rgb(236, 39, 233);
 }
 
 .skills {
@@ -36,7 +35,12 @@
   font-weight: var(--skl-font-weight);
   color: var(--skl-font-color);
   justify-self: center;
+  transition-duration: 500ms;
   z-index: 1;
+}
+
+.skill:hover {
+  transform: scale(1.2);
 }
 
 .wheelCr {
@@ -82,7 +86,19 @@
   width: 400px;
   border-radius: var(--skl-border-radius);
   background: var(--skl-bg-color);
-  box-shadow: var(--skl-box-shadow);
+  z-index: -1;
+  /* box-shadow: var(--skl-box-shadow); */
+}
+
+.dev-img {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+}
+
+.dev-img img {
+  width: 100%;
+  max-width: 500px;
 }
 
 .infoSkilss {
@@ -138,4 +154,22 @@ svg {
 
 .skill span {
   color: rgb(72, 72, 72);
+}
+
+.wheelCr {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr); /* 2 columns */
+}
+
+@media (max-width: 400px) {
+  .wheelCr {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+}
+
+@media (max-width: 250px) {
+  .wheelCr {
+    grid-template-columns: 1fr; /* 2 columns */
+  }
 }

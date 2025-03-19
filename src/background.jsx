@@ -80,7 +80,6 @@ export function Page() {
           </div>
           <div className="ph">
             <div className="photo"></div>
-            {/* <div className="cr"></div> */}
           </div>
         </div>
 

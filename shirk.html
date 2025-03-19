@@ -1,0 +1,972 @@
+<!--<p>
+      Def Allah ki Zaat o Shifat me Sareek karna - Shirk Lafz ke milne se shirk
+      nahi hota.....
+    </p>
+
+    <p>Ana hayyiyun - mai zinda hu, Alla-hu-la-ilaha-hu-a-hayyul-qayyuum</p>
+
+    <p>
+      Allah is Rahman and Raheem, Allah Bando par bada meharbaan hai in Al-Quran
+      - bil m'uminoona raufur'raheem
+    </p>
+    <p>
+      Def Allah Ta'ala ki khaas sifat ko kisi makhlooq ke saath shareek kiya
+      jaaye - Shirk
+    </p>
+    <p>
+      Allah mera rab hai, yousuf Alaihisslam ne farmaya, iinahu rabii, beshak
+      voh mera rab (Paalne wala hai) hai
+    </p>
+    <p>
+      vab-taghu ilaihil waseelah, Mushrikine Maqqa apne buto ki `Ibaadat` karke
+      Allah ki taraf waseelah lagaya, Allah se qareeb hone ke liye, Here Ibadat
+      so this is Shirk
+    </p> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Blog</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bcryptjs/2.4.3/bcrypt.min.js"></script>
+    <!-- Add this to your head section -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+      /* Basic page styling */
+      body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background: #333;
+        color: #fff;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      header h1 {
+        margin: 0;
+      }
+      #user-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      #user-info span {
+        font-size: 0.9em;
+      }
+      button {
+        cursor: pointer;
+        padding: 5px 10px;
+        margin: 5px;
+        border: none;
+        background: #007bff;
+        color: #fff;
+        border-radius: 3px;
+      }
+      button:hover {
+        background: #0056b3;
+      }
+      /* New post form styling */
+      #new-post-form {
+        background: #fff;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 5px;
+      }
+      #new-post-form input,
+      #new-post-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+      /* Posts styling */
+      #posts {
+        margin: 20px;
+      }
+
+      .post {
+        background: #ededed;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 5px;
+      }
+      .post h2 {
+        margin-top: 0;
+      }
+
+      .post p {
+        color: #393939;
+      }
+      .actions {
+        margin-top: 10px;
+      }
+      .actions span {
+        margin-left: 5px;
+        font-weight: bold;
+      }
+      /* Comments section styling */
+      .comments {
+        margin-top: 10px;
+        border-top: 1px solid #ddd;
+        padding-top: 10px;
+      }
+      .comment {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+        padding: 5px;
+        background: #eee;
+        border-radius: 3px;
+      }
+      .comment .avatar {
+        background: #007bff;
+        color: #edebeb;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8em;
+        margin-right: 8px;
+      }
+      .comment .text {
+        flex: 1;
+        color: #333;
+      }
+      .comment .small-btn {
+        font-size: 0.8em;
+        padding: 2px 4px;
+        margin-left: 4px;
+      }
+    </style>
+
+    <style>
+      /* Existing styles remain the same, add these new styles */
+      #auth-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f0f2f5;
+      }
+
+      .auth-modal {
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 300px;
+      }
+
+      .auth-tabs {
+        display: flex;
+        margin-bottom: 1rem;
+      }
+
+      .tab-button {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-weight: bold;
+        color: #666;
+      }
+
+      .tab-button.active {
+        color: #007bff;
+        border-bottom: 2px solid #007bff;
+      }
+
+      .auth-form input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      .auth-form button {
+        width: 100%;
+        padding: 10px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .auth-form button:hover {
+        background: #0056b3;
+      }
+
+      .error-message {
+        color: red;
+        font-size: 0.9em;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Authentication Container -->
+    <div id="auth-container">
+      <div class="auth-modal">
+        <div class="auth-tabs">
+          <button class="tab-button active" data-tab="login">Login</button>
+          <button class="tab-button" data-tab="register">Register</button>
+        </div>
+
+        <!-- Login Form -->
+        <div id="login-form" class="auth-form">
+          <div class="error-message" id="login-error"></div>
+          <input
+            type="text"
+            id="login-username"
+            placeholder="Username"
+            required
+          />
+          <input
+            type="password"
+            id="login-password"
+            placeholder="Password"
+            required
+          />
+          <button id="login-submit">Login</button>
+        </div>
+
+        <!-- Register Form -->
+        <div id="register-form" class="auth-form" style="display: none">
+          <div class="error-message" id="register-error"></div>
+          <input
+            type="text"
+            id="register-username"
+            placeholder="Username"
+            required
+          />
+          <input
+            type="password"
+            id="register-password"
+            placeholder="Password"
+            required
+          />
+          <input
+            type="password"
+            id="register-confirm-password"
+            placeholder="Confirm Password"
+            required
+          />
+          <button id="register-submit">Register</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog Content (hidden initially) -->
+    <div id="blog-content" style="display: none">
+      <header>
+        <div>
+          <h1>My Blog</h1>
+          <div id="user-info">
+            <span id="current-user"></span>
+            <button id="logout-button">Logout</button>
+          </div>
+        </div>
+        <button id="new-post-button">New Post</button>
+      </header>
+
+      <!-- Rest of the existing blog content remains the same -->
+      <!-- ... (keep the new post form and posts container as original) ... -->
+
+      <!-- New Post Form (hidden by default) -->
+      <div id="new-post-form" style="display: none">
+        <h2>Create New Post</h2>
+        <input type="text" id="post-title" placeholder="Post Title" />
+        <textarea
+          id="post-content"
+          placeholder="Post Content"
+          rows="6"
+        ></textarea>
+        <button id="submit-post">Submit Post</button>
+      </div>
+
+      <!-- Posts Container -->
+      <div id="posts">
+        <!-- Blog posts will be rendered here -->
+      </div>
+    </div>
+    <!-- <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Global configuration
+        const bcrypt = dcodeIO.bcrypt;
+        const saltRounds = 10;
+
+        // Simulated shared database for posts
+        const mockDatabase = {
+          Posts: [],
+          savePosts: function () {
+            localStorage.setItem("sharedPosts", JSON.stringify(this.Posts));
+          },
+          loadPosts: function () {
+            this.Posts = JSON.parse(localStorage.getItem("sharedPosts")) || [];
+            return this.Posts;
+          },
+        };
+
+        // Render posts from the mock database
+        function renderPosts() {
+          const posts = mockDatabase.loadPosts();
+          const postsDiv = document.getElementById("posts");
+          postsDiv.innerHTML = "";
+
+          posts.forEach((post, postIndex) => {
+            // Create post container
+            const postDiv = document.createElement("div");
+            postDiv.className = "post";
+
+            // Post title
+            const titleElem = document.createElement("h2");
+            titleElem.innerText = post.title;
+            postDiv.appendChild(titleElem);
+
+            // Posted by info
+            const postedBy = document.createElement("p");
+            postedBy.innerText = "Posted by: " + post.postedBy;
+            postedBy.style.fontStyle = "italic";
+            postedBy.style.fontSize = "0.9em";
+            const userAvatar = document.createElement("span");
+            userAvatar.className = "avatar";
+            userAvatar.innerText = post.postedBy.charAt(0).toUpperCase();
+            postDiv.appendChild(userAvatar);
+            postDiv.appendChild(postedBy);
+
+            // Post content
+            const contentElem = document.createElement("p");
+            contentElem.innerText = post.content;
+            postDiv.appendChild(contentElem);
+
+            // Actions container (edit, like, share, comment toggle)
+            const actionsDiv = document.createElement("div");
+            actionsDiv.className = "actions";
+
+            // Edit button
+            const editButton = document.createElement("button");
+            editButton.innerText = "✏️";
+            editButton.addEventListener("click", function () {
+              if (editButton.innerText === "✏️") {
+                titleElem.contentEditable = true;
+                contentElem.contentEditable = true;
+                titleElem.style.border = "1px solid #ccc";
+                contentElem.style.border = "1px solid #ccc";
+                titleElem.focus();
+                editButton.innerText = "Save";
+              } else {
+                titleElem.contentEditable = false;
+                contentElem.contentEditable = false;
+                titleElem.style.border = "none";
+                contentElem.style.border = "none";
+                editButton.innerText = "✏️";
+                // Update post details and save
+                post.title = titleElem.innerText;
+                post.content = contentElem.innerText;
+                mockDatabase.savePosts();
+                renderPosts();
+              }
+            });
+            actionsDiv.appendChild(editButton);
+
+            // Like button
+            const likeButton = document.createElement("button");
+            likeButton.innerText = "❤️" + post.likes;
+            likeButton.addEventListener("click", function () {
+              post.likes++;
+              mockDatabase.savePosts();
+              renderPosts();
+            });
+            actionsDiv.appendChild(likeButton);
+
+            // Share button
+            const shareButton = document.createElement("button");
+            shareButton.innerText = "🔗";
+            shareButton.addEventListener("click", function () {
+              if (navigator.share) {
+                navigator
+                  .share({
+                    title: post.title,
+                    text: post.content,
+                    url: window.location.href,
+                  })
+                  .then(() => console.log("Post shared successfully!"))
+                  .catch(console.error);
+              } else {
+                copyToClipboard(window.location.href);
+                alert("Post link copied to clipboard!");
+              }
+            });
+            actionsDiv.appendChild(shareButton);
+
+            // Comment toggle button
+            const commentButton = document.createElement("button");
+            commentButton.innerText = "💬";
+            actionsDiv.appendChild(commentButton);
+
+            postDiv.appendChild(actionsDiv);
+
+            // Comments section (hidden by default)
+            const commentsSection = document.createElement("div");
+            commentsSection.className = "comments";
+            commentsSection.style.display = "none";
+
+            // Comment form
+            const commentInput = document.createElement("textarea");
+            commentInput.placeholder = "Write a comment...";
+            commentInput.style.width = "80%";
+            const commentSubmit = document.createElement("button");
+            commentSubmit.innerText = "Submit";
+            const commentForm = document.createElement("div");
+            commentForm.appendChild(commentInput);
+            commentForm.appendChild(commentSubmit);
+            commentsSection.appendChild(commentForm);
+
+            // Container for comments list
+            const commentList = document.createElement("div");
+            commentsSection.appendChild(commentList);
+
+            // Render each comment for the current post
+            post.comments.forEach((comment, commentIndex) => {
+              const commentDiv = document.createElement("div");
+              commentDiv.className = "comment";
+
+              // Avatar for comment
+              const avatar = document.createElement("span");
+              avatar.className = "avatar";
+              avatar.innerText = comment.user.charAt(0).toUpperCase();
+              commentDiv.appendChild(avatar);
+
+              // Comment text
+              const textSpan = document.createElement("span");
+              textSpan.className = "text";
+              textSpan.innerText = comment.text;
+              commentDiv.appendChild(textSpan);
+
+              // Like button for comment
+              const commentLikeButton = document.createElement("button");
+              commentLikeButton.className = "small-btn";
+              commentLikeButton.innerText = "❤️" + comment.likes;
+              commentLikeButton.addEventListener("click", function () {
+                comment.likes++;
+                mockDatabase.savePosts();
+                renderPosts();
+              });
+              commentDiv.appendChild(commentLikeButton);
+
+              // Dislike button for comment
+              const commentDislikeButton = document.createElement("button");
+              commentDislikeButton.className = "small-btn";
+              commentDislikeButton.innerText = "👎" + comment.dislikes;
+              commentDislikeButton.addEventListener("click", function () {
+                comment.dislikes++;
+                mockDatabase.savePosts();
+                renderPosts();
+              });
+              commentDiv.appendChild(commentDislikeButton);
+
+              commentList.appendChild(commentDiv);
+            });
+
+            // Toggle comments visibility
+            commentButton.addEventListener("click", function () {
+              commentsSection.style.display =
+                commentsSection.style.display === "none" ? "block" : "none";
+            });
+
+            // Handle new comment submission
+            commentSubmit.addEventListener("click", function () {
+              const commentText = commentInput.value.trim();
+              if (!commentText) {
+                alert("Please write a comment.");
+                return;
+              }
+              const newComment = {
+                text: commentText,
+                user: localStorage.getItem("currentUser") || "Anonymous",
+                likes: 0,
+                dislikes: 0,
+              };
+              post.comments.push(newComment);
+              mockDatabase.savePosts();
+              renderPosts();
+            });
+
+            postDiv.appendChild(commentsSection);
+            // Prepend post so the newest posts appear first
+            postsDiv.prepend(postDiv);
+          });
+        }
+
+        // Fallback: Copy text to clipboard
+        function copyToClipboard(text) {
+          const textarea = document.createElement("textarea");
+          textarea.value = text;
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand("copy");
+          document.body.removeChild(textarea);
+        }
+
+        // ---------------- Authentication Functionality ----------------
+
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+
+        // Check if user is already logged in
+        function checkLoggedIn() {
+          const loggedInUser = localStorage.getItem("currentUser");
+          const authContainer = document.getElementById("auth-container");
+          const blogContent = document.getElementById("blog-content");
+          const currentUserSpan = document.getElementById("current-user");
+          if (loggedInUser) {
+            authContainer.style.display = "none";
+            blogContent.style.display = "block";
+            currentUserSpan.textContent = `Logged in as: ${loggedInUser}`;
+          }
+        }
+        checkLoggedIn();
+
+        // Tab switching between Login and Register forms
+        document.querySelectorAll(".tab-button").forEach((button) => {
+          button.addEventListener("click", () => {
+            const tab = button.dataset.tab;
+            document
+              .querySelectorAll(".tab-button")
+              .forEach((b) => b.classList.remove("active"));
+            button.classList.add("active");
+
+            document.querySelectorAll(".auth-form").forEach((form) => {
+              form.style.display = "none";
+            });
+
+            if (tab === "login") {
+              document.getElementById("login-form").style.display = "block";
+            } else {
+              document.getElementById("register-form").style.display = "block";
+            }
+          });
+        });
+
+        // Login event listener
+        document
+          .getElementById("login-submit")
+          .addEventListener("click", async function () {
+            const username = document
+              .getElementById("login-username")
+              .value.trim();
+            const password = document
+              .getElementById("login-password")
+              .value.trim();
+            const errorElement = document.getElementById("login-error");
+
+            const user = users.find((u) => u.username === username);
+            if (!user) {
+              errorElement.textContent = "User not found";
+              return;
+            }
+            const match = await bcrypt.compare(password, user.password);
+            if (!match) {
+              errorElement.textContent = "Incorrect password";
+              return;
+            }
+            localStorage.setItem("currentUser", username);
+            document.getElementById("auth-container").style.display = "none";
+            document.getElementById("blog-content").style.display = "block";
+            document.getElementById(
+              "current-user"
+            ).textContent = `Logged in as: ${username}`;
+          });
+
+        // Registration event listener
+        document
+          .getElementById("register-submit")
+          .addEventListener("click", async function () {
+            const username = document
+              .getElementById("register-username")
+              .value.trim();
+            const password = document
+              .getElementById("register-password")
+              .value.trim();
+            const confirmPassword = document
+              .getElementById("register-confirm-password")
+              .value.trim();
+            const errorElement = document.getElementById("register-error");
+
+            if (users.some((u) => u.username === username)) {
+              errorElement.textContent = "Username already exists";
+              return;
+            }
+            if (password !== confirmPassword) {
+              errorElement.textContent = "Passwords do not match";
+              return;
+            }
+            const hashedPassword = await bcrypt.hash(password, saltRounds);
+            users.push({ username, password: hashedPassword });
+            localStorage.setItem("users", JSON.stringify(users));
+            localStorage.setItem("currentUser", username);
+            document.getElementById("auth-container").style.display = "none";
+            document.getElementById("blog-content").style.display = "block";
+            document.getElementById(
+              "current-user"
+            ).textContent = `Logged in as: ${username}`;
+          });
+
+        // Logout functionality
+        document
+          .getElementById("logout-button")
+          .addEventListener("click", function () {
+            localStorage.removeItem("currentUser");
+            location.reload();
+          });
+
+        // ---------------- Blog (New Post) Functionality ----------------
+
+        // Toggle new post form visibility
+        document
+          .getElementById("new-post-button")
+          .addEventListener("click", function () {
+            const form = document.getElementById("new-post-form");
+            form.style.display =
+              form.style.display === "none" || form.style.display === ""
+                ? "block"
+                : "none";
+          });
+
+        // Handle new post submission
+        document
+          .getElementById("submit-post")
+          .addEventListener("click", function () {
+            const title = document.getElementById("post-title").value.trim();
+            const content = document
+              .getElementById("post-content")
+              .value.trim();
+            if (!title || !content) {
+              alert("Please enter both title and content.");
+              return;
+            }
+            const newPost = {
+              title: title,
+              content: content,
+              postedBy: localStorage.getItem("currentUser") || "Anonymous",
+              likes: 0,
+              comments: [],
+            };
+            const posts = mockDatabase.loadPosts();
+            posts.push(newPost);
+            mockDatabase.savePosts();
+            renderPosts();
+            // Clear form and hide it
+            document.getElementById("post-title").value = "";
+            document.getElementById("post-content").value = "";
+            document.getElementById("new-post-form").style.display = "none";
+          });
+
+        // Initial render of posts on page load
+        renderPosts();
+      });
+    </script> -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Global configuration
+        const bcrypt = dcodeIO.bcrypt;
+        const saltRounds = 10;
+
+        // ---------------- Authentication Functionality ----------------
+
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+
+        // Check if user is already logged in
+        function checkLoggedIn() {
+          const loggedInUser = localStorage.getItem("currentUser");
+          const authContainer = document.getElementById("auth-container");
+          const blogContent = document.getElementById("blog-content");
+          const currentUserSpan = document.getElementById("current-user");
+          if (loggedInUser) {
+            authContainer.style.display = "none";
+            blogContent.style.display = "block";
+            currentUserSpan.textContent = `Logged in as: ${loggedInUser}`;
+          }
+        }
+        checkLoggedIn();
+
+        // Tab switching for Login/Register
+        document.querySelectorAll(".tab-button").forEach((button) => {
+          button.addEventListener("click", () => {
+            const tab = button.dataset.tab;
+            document
+              .querySelectorAll(".tab-button")
+              .forEach((b) => b.classList.remove("active"));
+            button.classList.add("active");
+
+            document.querySelectorAll(".auth-form").forEach((form) => {
+              form.style.display = "none";
+            });
+
+            if (tab === "login") {
+              document.getElementById("login-form").style.display = "block";
+            } else {
+              document.getElementById("register-form").style.display = "block";
+            }
+          });
+        });
+
+        // Login event
+        document
+          .getElementById("login-submit")
+          .addEventListener("click", async function () {
+            const username = document
+              .getElementById("login-username")
+              .value.trim();
+            const password = document
+              .getElementById("login-password")
+              .value.trim();
+            const errorElement = document.getElementById("login-error");
+
+            const user = users.find((u) => u.username === username);
+            if (!user) {
+              errorElement.textContent = "User not found";
+              return;
+            }
+            const match = await bcrypt.compare(password, user.password);
+            if (!match) {
+              errorElement.textContent = "Incorrect password";
+              return;
+            }
+            localStorage.setItem("currentUser", username);
+            document.getElementById("auth-container").style.display = "none";
+            document.getElementById("blog-content").style.display = "block";
+            document.getElementById(
+              "current-user"
+            ).textContent = `Logged in as: ${username}`;
+          });
+
+        // Registration event
+        document
+          .getElementById("register-submit")
+          .addEventListener("click", async function () {
+            const username = document
+              .getElementById("register-username")
+              .value.trim();
+            const password = document
+              .getElementById("register-password")
+              .value.trim();
+            const confirmPassword = document
+              .getElementById("register-confirm-password")
+              .value.trim();
+            const errorElement = document.getElementById("register-error");
+
+            if (users.some((u) => u.username === username)) {
+              errorElement.textContent = "Username already exists";
+              return;
+            }
+            if (password !== confirmPassword) {
+              errorElement.textContent = "Passwords do not match";
+              return;
+            }
+            const hashedPassword = await bcrypt.hash(password, saltRounds);
+            users.push({ username, password: hashedPassword });
+            localStorage.setItem("users", JSON.stringify(users));
+            localStorage.setItem("currentUser", username);
+            document.getElementById("auth-container").style.display = "none";
+            document.getElementById("blog-content").style.display = "block";
+            document.getElementById(
+              "current-user"
+            ).textContent = `Logged in as: ${username}`;
+          });
+
+        // Logout functionality
+        document
+          .getElementById("logout-button")
+          .addEventListener("click", function () {
+            localStorage.removeItem("currentUser");
+            location.reload();
+          });
+
+        // ---------------- Blog (Posts) Functionality Using API ----------------
+
+        // Fetch posts from the backend API
+        async function fetchPosts() {
+          try {
+            const response = await axios.get(
+              "https://your-backend.com/api/posts"
+            );
+            renderPosts(response.data);
+          } catch (error) {
+            console.error("Error fetching posts:", error);
+          }
+        }
+
+        // Render posts on the page
+        function renderPosts(posts) {
+          const postsDiv = document.getElementById("posts");
+          postsDiv.innerHTML = "";
+          posts.forEach((post, postIndex) => {
+            const postDiv = document.createElement("div");
+            postDiv.className = "post";
+
+            // Post title
+            const titleElem = document.createElement("h2");
+            titleElem.innerText = post.title;
+            postDiv.appendChild(titleElem);
+
+            // Posted by info
+            const postedBy = document.createElement("p");
+            postedBy.innerText = "Posted by: " + post.postedBy;
+            postedBy.style.fontStyle = "italic";
+            postedBy.style.fontSize = "0.9em";
+            const userAvatar = document.createElement("span");
+            userAvatar.className = "avatar";
+            userAvatar.innerText = post.postedBy.charAt(0).toUpperCase();
+            postDiv.appendChild(userAvatar);
+            postDiv.appendChild(postedBy);
+
+            // Post content
+            const contentElem = document.createElement("p");
+            contentElem.innerText = post.content;
+            postDiv.appendChild(contentElem);
+
+            // Actions: Edit, Like, Share, Comment toggle
+            const actionsDiv = document.createElement("div");
+            actionsDiv.className = "actions";
+
+            // Edit button (for demonstration, this would need an API update call)
+            const editButton = document.createElement("button");
+            editButton.innerText = "✏️";
+            editButton.addEventListener("click", function () {
+              if (editButton.innerText === "✏️") {
+                titleElem.contentEditable = true;
+                contentElem.contentEditable = true;
+                titleElem.style.border = "1px solid #ccc";
+                contentElem.style.border = "1px solid #ccc";
+                titleElem.focus();
+                editButton.innerText = "Save";
+              } else {
+                titleElem.contentEditable = false;
+                contentElem.contentEditable = false;
+                titleElem.style.border = "none";
+                contentElem.style.border = "none";
+                editButton.innerText = "✏️";
+                // You would send an update request here to the API
+                // axios.put(`https://your-backend.com/api/posts/${post.id}`, { title: titleElem.innerText, content: contentElem.innerText })
+                //   .then(fetchPosts);
+              }
+            });
+            actionsDiv.appendChild(editButton);
+
+            // Like button (for demonstration, update calls would be needed)
+            const likeButton = document.createElement("button");
+            likeButton.innerText = "❤️" + (post.likes || 0);
+            likeButton.addEventListener("click", async function () {
+              // Increment like count and update via API
+              try {
+                await axios.put(
+                  `https://your-backend.com/api/posts/${post.id}/like`
+                );
+                fetchPosts();
+              } catch (error) {
+                console.error("Error updating likes:", error);
+              }
+            });
+            actionsDiv.appendChild(likeButton);
+
+            // Share button
+            const shareButton = document.createElement("button");
+            shareButton.innerText = "🔗";
+            shareButton.addEventListener("click", function () {
+              if (navigator.share) {
+                navigator
+                  .share({
+                    title: post.title,
+                    text: post.content,
+                    url: window.location.href,
+                  })
+                  .then(() => console.log("Post shared successfully!"))
+                  .catch(console.error);
+              } else {
+                copyToClipboard(window.location.href);
+                alert("Post link copied to clipboard!");
+              }
+            });
+            actionsDiv.appendChild(shareButton);
+
+            // Comment toggle button (for brevity, comments handling is omitted)
+            const commentButton = document.createElement("button");
+            commentButton.innerText = "💬";
+            actionsDiv.appendChild(commentButton);
+
+            postDiv.appendChild(actionsDiv);
+
+            postsDiv.prepend(postDiv);
+          });
+        }
+
+        // Fallback: Copy text to clipboard
+        function copyToClipboard(text) {
+          const textarea = document.createElement("textarea");
+          textarea.value = text;
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand("copy");
+          document.body.removeChild(textarea);
+        }
+
+        // Toggle new post form visibility
+        document
+          .getElementById("new-post-button")
+          .addEventListener("click", function () {
+            const form = document.getElementById("new-post-form");
+            form.style.display =
+              form.style.display === "none" || form.style.display === ""
+                ? "block"
+                : "none";
+          });
+
+        // Handle new post submission (send to API)
+        document
+          .getElementById("submit-post")
+          .addEventListener("click", async function () {
+            const title = document.getElementById("post-title").value.trim();
+            const content = document
+              .getElementById("post-content")
+              .value.trim();
+            if (!title || !content) {
+              alert("Please enter both title and content.");
+              return;
+            }
+            const newPost = {
+              title: title,
+              content: content,
+              postedBy: localStorage.getItem("currentUser") || "Anonymous",
+            };
+            try {
+              await axios.post("https://your-backend.com/api/posts", newPost);
+              fetchPosts(); // Refresh posts after submission
+              // Clear form and hide it
+              document.getElementById("post-title").value = "";
+              document.getElementById("post-content").value = "";
+              document.getElementById("new-post-form").style.display = "none";
+            } catch (error) {
+              console.error("Error submitting post:", error);
+            }
+          });
+
+        // Initial fetch of posts on page load
+        fetchPosts();
+      });
+    </script>
+  </body>
+</html>
