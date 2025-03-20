@@ -18,10 +18,6 @@ export default function Background() {
     <>
       <Page></Page>
       <div className="bgproject project">
-        {/* <div className="tlsqr"></div>s */}
-        {/* <div className="tr tr1"></div> */}
-        {/* <div className="tr tr2"></div> */}
-        {/* <div className="tr tr3"></div> */}
         <div className="fsqr"></div>
         <div className="trsqr"></div>
         <Projects projects={ProjectsData}></Projects>
@@ -35,14 +31,6 @@ export default function Background() {
     </>
   );
 }
-
-const ResumeDownload = () => {
-  return (
-    <div>
-      <h1>Download My Resume</h1>
-    </div>
-  );
-};
 
 function GoTheSection(id) {
   document.querySelector(`.${id}`)?.scrollIntoView({ behavior: "smooth" });
@@ -68,16 +56,14 @@ export function Page() {
               {item}
             </span>
           ))}
-          <span className="header-item">
-            <a
-              href={pdf}
-              download="Mahtab_Shah_Resume.pdf"
-              className="btn text-white btn-outline-info"
-              // style={{ color: "#ddd" }}
-            >
-              Get Resume
-            </a>
-          </span>
+          <a
+            href={pdf}
+            download="Mahtab_Shah_Resume.pdf"
+            className="btn text-white btn-outline-info header-item"
+            style={{ fontSize: "var(--vr-f)", padding: "5px 4px" }}
+          >
+            Get Resume
+          </a>
         </div>
 
         <div className="m">
