@@ -125,6 +125,7 @@
 .skillDiscription {
   padding: var(--skl-padding);
   color: var(--skl-desc-color);
+  text-align: justify;
 }
 
 @media (max-width: 700px) {
