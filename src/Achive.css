@@ -25,6 +25,7 @@
 
 .bg-2 {
   background-color: var(--ach-bg-color);
+  background: linear-gradient(to bottom, #eee4ff, #fbf1fe);
 }
 
 @media screen and (min-width: 700px) and (max-width: 1024px) {

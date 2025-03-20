@@ -102,7 +102,7 @@
 }
 
 .infoSkilss {
-  border-right: var(--skl-info-border);
+  /* border-right: var(--skl-info-border); */
   width: 50%;
   z-index: 10;
   z-index: 2;
