@@ -6,6 +6,8 @@ import img1 from "./asset/Screenshot 2025-01-27 194133.png";
 import img2 from "./asset/Screenshot 2025-01-27 130757.png";
 import img3 from "./asset/Screenshot 2025-01-27 195704.png";
 
+import pdf from "./public/MAHTAB SHAH LRU+.pdf";
+
 // import Achive from "./AchiveCirtified";
 import Footar from "./Footer";
 import Skills from "./Skills";
@@ -34,14 +36,22 @@ export default function Background() {
   );
 }
 
+const ResumeDownload = () => {
+  return (
+    <div>
+      <h1>Download My Resume</h1>
+    </div>
+  );
+};
+
 function GoTheSection(id) {
   document.querySelector(`.${id}`)?.scrollIntoView({ behavior: "smooth" });
 }
 
 export function Page() {
   let header = {
-    items: ["Mahtab Shah", "Home", "Contact", "Get resume", "Project"],
-    ids: ["nm", "home", "contact", "get", "project"],
+    items: ["Mahtab Shah", "Home", "Contact", "Project"],
+    ids: ["nm", "home", "contact", "project"],
   };
 
   return (
@@ -58,6 +68,16 @@ export function Page() {
               {item}
             </span>
           ))}
+          <span className="header-item">
+            <a
+              href={pdf}
+              download="Mahtab_Shah_Resume.pdf"
+              className="btn text-white btn-outline-info"
+              // style={{ color: "#ddd" }}
+            >
+              Get Resume
+            </a>
+          </span>
         </div>
 
         <div className="m">
@@ -67,8 +87,12 @@ export function Page() {
             <span className="name">Mahtab Shah</span>
             <hr />
             <span className="h2-type">
-              Web Developer, Freelancer, Web disigner
+              Web Developer, Programer, Web disigner
             </span>
+            <p>
+              I am pursuing a Bachelor of Technology in Electrical Engineering
+              from IIT (ISM) Dhanbad.
+            </p>
             <p>
               As a software developer i play to finding deep concept behind
               software technologies or related fields.
@@ -77,6 +101,16 @@ export function Page() {
               My mission is to design and develop a website that you and your
               audience love.
             </p>
+
+            <div>
+              <a
+                href={pdf}
+                download="Mahtab_Shah_Resume.pdf"
+                className="btn btn-outline-danger"
+              >
+                Get Resume
+              </a>
+            </div>
           </div>
           <div className="ph">
             <div className="photo"></div>
