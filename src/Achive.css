@@ -2,8 +2,8 @@
   --ach-padding: 3%;
   --ach-gap: 10%;
   --ach-border-radius: 10px;
-  --ach-aspect-ratio: 11/8;
-  --ach-bg-color: rgb(249, 239, 252);
+  --ach-aspect-ratio: 22/15;
+  --ach-bg-color: rgb(253, 247, 255);
   --ach-box-shadow: 0 0 5px rgba(28, 47, 53, 0.836);
   --ach-width-max: 600px;
   --ach-width-min: 40vw;
@@ -12,131 +12,29 @@
   --ach-position-right: clamp(30px, 20vw, 600px);
 }
 
-.Achived-Section {
-  padding: var(--ach-padding);
-  gap: var(--ach-gap);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  position: relative;
-  z-index: 3;
-}
-
 .Cirtificate {
-  display: flex;
-  justify-content: center;
   transition: transform 0.3s;
-  flex-grow: 1;
   aspect-ratio: var(--ach-aspect-ratio);
-  border-radius: var(--ach-border-radius);
+  max-width: var(--ach-width-max);
 }
 
 .img {
-  width: 100%;
-  border-radius: 3px;
   max-width: var(--ach-width-max);
   box-shadow: var(--ach-box-shadow);
 }
 
-.achiveBg {
-  min-height: 100vh;
-  position: relative;
-  overflow: hidden;
-  display: flex;
+.bg-2 {
   background-color: var(--ach-bg-color);
 }
 
-.abtCate {
-  padding: 20px 0;
-  padding-left: calc(
-    calc(66vw - 10px) - var(--ach-width-clamp) - var(--ach-position-left)
-  );
-}
-
-.Achmph,
-.Rcft,
-.abtCate {
-  width: 33vw;
-  position: relative;
-}
-
-.Rcft {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.abtp {
-  padding: 10px;
-  color: rgb(23, 23, 23);
-}
-
-.Achmph {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-.f2c,
-.f1c {
-  border-radius: var(--ach-border-radius);
-  aspect-ratio: var(--ach-aspect-ratio);
-  width: var(--ach-width-clamp);
-}
-
-.f1c {
-  position: absolute;
-  left: var(--ach-position-left);
-  top: 40px;
-}
-
-.f2c {
-  position: absolute;
-  right: var(--ach-position-right);
-  bottom: 60px;
-}
-
-@media screen and (max-width: 700px) {
-  /* Your styles here */
-
-  .Achived-Section {
-    display: block;
-    padding: 4%;
-  }
-
+@media screen and (min-width: 700px) and (max-width: 1024px) {
   .Cirtificate {
     margin: 4% 0;
   }
+}
 
-  .Achmph,
-  .Rcft,
-  .abtCate {
-    width: 100%;
-    flex-grow: 1;
-  }
-
-  .achiveBg {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-  }
-
-  .f1c {
-    top: clamp(calc(100% - 20vw), 50vw, -300px);
-    left: clamp(30px, 10vw, 100px);
-    width: calc(min(500px, 65vw));
-    position: relative;
-  }
-
-  .f2c {
-    position: relative;
-    width: calc(min(500px, 65vw));
-    right: clamp(30px, 10vw, 100px);
-    bottom: clamp(calc(100% - 20vw), 50vw, -300px);
-    align-self: end;
-    margin-bottom: 40px;
-  }
-
-  .abtCate {
-    padding-left: calc(clamp(30px, 10vw, 100px) - 10px);
+@media screen and (max-width: 700px) {
+  .cf-2 {
+    flex-direction: column !important;
   }
 }

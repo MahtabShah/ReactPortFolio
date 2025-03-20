@@ -136,6 +136,10 @@
     border-right: none;
     width: 100%;
   }
+
+  .sklvl {
+    text-align: start;
+  }
 }
 
 .divSvg {

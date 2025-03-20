@@ -1,5 +1,5 @@
 .BgParent {
-  /* border: 2px solid red; */
+  border: 2px solid red;
   min-height: 80vh;
   position: relative;
   overflow: hidden;
@@ -75,20 +75,12 @@
 
 .bgproject {
   position: relative;
-  /* height: 100vh; */
-  /* border: 2px solid red; */
   overflow: hidden;
-  /* background-attachment: fixed; */
-  /* background: repeating-linear-gradient(140deg, rgb(202, 128, 239), #c8a2f7); */
 }
 
 .tr {
-  /* border: 2px solid red; */
-
   width: 44vw;
   height: 44vh;
-
-  /* transform: rotateZ(-45deg); */
   position: absolute;
   clip-path: polygon(0% 100%, 100% 0%, 100% 100%, 0% 100%);
 }

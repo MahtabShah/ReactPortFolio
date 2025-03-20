@@ -2,7 +2,7 @@
 * {
   box-sizing: border-box;
   font-family: var(--font-family);
-  hyphens: auto;
+  /* hyphens: auto; */
 }
 
 :root {
@@ -194,7 +194,7 @@ body {
   min-height: clamp(100px, calc(100px + 30vw), 400px);
   margin-right: calc(100px + 8vw);
   margin-top: calc(10px + 4vw);
-  background: url("src/asset/WhatsApp_Image_2025-03-19_at_16.49.53_12839dd8-removebg-preview.png");
+  background: url("./asset/WhatsApp_Image_2025-03-19_at_16.49.53_12839dd8-removebg-preview.png");
   background-position: center;
   background-repeat: no-repeat;
   backdrop-filter: hue-rotate(45deg);
