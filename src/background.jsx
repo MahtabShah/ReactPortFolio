@@ -5,6 +5,7 @@ import "./App.css";
 import img1 from "./asset/Screenshot 2025-01-27 194133.png";
 import img2 from "./asset/Screenshot 2025-01-27 130757.png";
 import img3 from "./asset/Screenshot 2025-01-27 195704.png";
+import img4 from "./asset/Screenshot 2025-01-27 195704.png";
 
 import pdf from "./public/MAHTAB SHAH LRU+.pdf";
 
@@ -187,6 +188,7 @@ const ProjectsData = {
   titles: [
     "WEB COLOR PALLET APPLICATION",
     "LIVE VISUAL STUDIO CODE (LVSC)",
+    "DIGITAL ONLINE OFFLINE MARKET",
     "SORTING VISUALIZER WEB APP",
   ],
 
@@ -208,6 +210,13 @@ const ProjectsData = {
       {<br />} Enhanced real-time coding and debugging experiences through an
       interactive interface.
     </>,
+    <>
+      A full-stack website designed to connect local businesses with nearby customers built using HTML, Bootstrap CSS, JavaScript, Node.js, Express.js, and MongoDB. {<br />}
+      Developed a platform where merchants can create profiles, list products, and manage orders efficiently.{<br />}
+      Implemented a hyperlocal search system, allowing users to discover and purchase products from nearby stores with pickup or local delivery options.{<br />}
+      Integrated UPI-based payment methods for secure and seamless transactions, enhancing the user experience and checkout efficiency.
+
+    </>,
 
     <>
       Allow users to select the sorting algorithm e.g., Bubble Sort, Merge Sort,
@@ -222,7 +231,7 @@ const ProjectsData = {
     </>,
   ],
 
-  srcs: [img1, img2, img3],
+  srcs: [img1, img2, img3 , img4],
 };
 
 export function Projects({ projects }) {
