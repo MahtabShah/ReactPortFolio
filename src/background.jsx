@@ -349,7 +349,7 @@ export function SocialMedia() {
     <>
       <div className="socil-side">
         <div className="belowIcons">
-          <h2>Connect US</h2>
+          <h2>Contact/Follow me</h2>
         </div>
 
         <div className="social-media">
