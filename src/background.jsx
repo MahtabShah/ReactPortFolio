@@ -4,8 +4,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import img1 from "./asset/Screenshot 2025-01-27 194133.png";
 import img2 from "./asset/Screenshot 2025-01-27 130757.png";
+import img4 from "./asset/Screenshot 2025-03-29 134648.png";
 import img3 from "./asset/Screenshot 2025-01-27 195704.png";
-import img4 from "./asset/Screenshot 2025-01-27 195704.png";
+
 
 import pdf from "./public/MAHTAB SHAH LRU+.pdf";
 
