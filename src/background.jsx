@@ -6,7 +6,7 @@ import img1 from "./asset/Screenshot 2025-01-27 194133.png";
 import img2 from "./asset/Screenshot 2025-01-27 130757.png";
 import img3 from "./asset/Screenshot 2025-03-29 134648.png";
 import img4 from "./asset/Screenshot 2025-01-27 195704.png";
-
+import img5 from "./asset/Screenshot 2025-03-30 211852.png";
 
 import pdf from "./public/MAHTAB SHAH LRU+.pdf";
 
@@ -191,6 +191,7 @@ const ProjectsData = {
     "LIVE VISUAL STUDIO CODE (LVSC)",
     "DIGITAL ONLINE OFFLINE MARKET",
     "SORTING VISUALIZER WEB APP",
+    "PORTFOLIO WEBSITE",
   ],
 
   discriptions: [
@@ -230,9 +231,13 @@ const ProjectsData = {
       Make it educational for users who want to learn how sorting algorithms
       work.
     </>,
+    <>
+      Responsive and simple UI has been used in this portfolio {<br />}
+      A portfolio website built using HTML, Bootstrap CSS, JavaScript.{<br />}
+    </>,
   ],
 
-  srcs: [img1, img2, img3 , img4],
+  srcs: [img1, img2, img3 , img4 , img5],
 };
 
 export function Projects({ projects }) {
