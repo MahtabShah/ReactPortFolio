@@ -1,6 +1,7 @@
 import "./skill.css";
 import { Cube } from "./background";
-import sklimg from "./public/Screenshot_2025-03-19_162455-removebg-preview.png";
+// import sklimg from "./public/Screenshot_2025-03-19_162455-removebg-preview.png";
+import sklimg from "./public/WhatsApp Image 2025-03-31 at 17.44.36_cfd9d5a9.jpg";
 
 export default function Skills() {
   return (
