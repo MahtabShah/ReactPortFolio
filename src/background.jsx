@@ -82,7 +82,7 @@ export function Page() {
               from IIT (ISM) Dhanbad.
             </p>
             <p>
-              As a software developer i play to finding deep concept behind
+              As a software developer i play to find deep concept behind
               software technologies or related fields.
             </p>
             <p>
@@ -232,8 +232,9 @@ const ProjectsData = {
       work.
     </>,
     <>
-      Responsive and simple UI has been used in this portfolio {<br />}
       A portfolio website built using HTML, Bootstrap CSS, JavaScript.{<br />}
+      Fully Responsive and simple UI has been used in this portfolio website. {<br />}
+      
     </>,
   ],
 
