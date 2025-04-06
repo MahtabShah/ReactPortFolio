@@ -7,8 +7,9 @@ import img2 from "./asset/Screenshot 2025-01-27 130757.png";
 import img3 from "./asset/Screenshot 2025-03-29 134648.png";
 import img4 from "./asset/Screenshot 2025-01-27 195704.png";
 import img5 from "./asset/Screenshot 2025-03-30 211852.png";
-
+import SocialIcons from "./SocialIcon";
 import pdf from "./public/MAHTAB SHAH LRU+.pdf";
+import "./Project.css";
 
 // import Achive from "./AchiveCirtified";
 import Footar from "./Footer";
@@ -19,7 +20,7 @@ export default function Background() {
   return (
     <>
       <Page></Page>
-      <div className="bgproject project">
+      <div className="bgproject project d-flex flex-column grand-project">
         <div className="fsqr"></div>
         <div className="trsqr"></div>
         <Projects projects={ProjectsData}></Projects>
@@ -28,6 +29,7 @@ export default function Background() {
       <div className="ftr">
         <Skills></Skills>
       </div>
+
       <Footar></Footar>
       <Footer></Footer>
     </>
@@ -94,7 +96,7 @@ export function Page() {
               <a
                 href={pdf}
                 download="Mahtab_Shah_Resume.pdf"
-                className="btn btn-outline-danger"
+                className="btn btn-outline-danger btn-shadow"
               >
                 Get Resume
               </a>
@@ -213,11 +215,16 @@ const ProjectsData = {
       interactive interface.
     </>,
     <>
-      A full-stack website designed to connect local businesses with nearby customers built using HTML, Bootstrap CSS, JavaScript, Node.js, Express.js, and MongoDB. {<br />}
-      Developed a platform where merchants can create profiles, list products, and manage orders efficiently.{<br />}
-      Implemented a hyperlocal search system, allowing users to discover and purchase products from nearby stores with pickup or local delivery options.{<br />}
-      Integrated UPI-based payment methods for secure and seamless transactions, enhancing the user experience and checkout efficiency.
-
+      A full-stack website designed to connect local businesses with nearby
+      customers built using HTML, Bootstrap CSS, JavaScript, Node.js,
+      Express.js, and MongoDB. {<br />}
+      Developed a platform where merchants can create profiles, list products,
+      and manage orders efficiently.{<br />}
+      Implemented a hyperlocal search system, allowing users to discover and
+      purchase products from nearby stores with pickup or local delivery
+      options.{<br />}
+      Integrated UPI-based payment methods for secure and seamless transactions,
+      enhancing the user experience and checkout efficiency.
     </>,
 
     <>
@@ -233,66 +240,58 @@ const ProjectsData = {
     </>,
     <>
       A portfolio website built using HTML, Bootstrap CSS, JavaScript.{<br />}
-      Fully Responsive and simple UI has been used in this portfolio website. {<br />}
-      
+      Fully Responsive and simple UI has been used in this portfolio website.{" "}
+      {<br />}
     </>,
   ],
 
-  srcs: [img1, img2, img3 , img4 , img5],
+  srcs: [img1, img2, img3, img4, img5],
 };
 
 export function Projects({ projects }) {
   return (
-    <div className="proj-c">
-      <span
-        style={{
-          position: "absolute",
-        }}
-        className="nmProject"
-      >
-        PROJECTS
-      </span>
-      {projects.titles.map((t, index) => (
-        <>
-          <div key={index} className="m-card">
-            <h2 key={index} className="m-card-title">
-              {t}
-            </h2>
-            {/* <div
-              className="i"
-              style={{
-                background: `url(${projects.srcs[index]})`,
-              }}
-            ></div> */}
-            <div style={{ display: "flex", aspectRatio: "11/6" }}>
-              {/* <img src={projects.srcs[index]} alt="" style={{ width: "50%" }} /> */}
-              <img
-                src={projects.srcs[index]}
-                alt=""
-                style={{ width: "100%" }}
-              />
-            </div>
-            <div className="m-card-content">
-              <p className="m-card-description">
-                {projects.discriptions[index]}
-              </p>
-            </div>
-          </div>
-        </>
-      ))}
+    <>
+      <span className="nmProject p-2 rounded ">PROJECTS</span>
+      <div className="proj-c project-container">
+        {projects.titles.map((t, index) => (
+          <>
+            <div key={index} className="m-card project-card">
+              <h2 key={index} className="m-card-title">
+                {t}
+              </h2>
 
-      <div className="projectbrCr">
-        <Shape
-          style={{
-            left: "calc(100% - 190px)",
-            top: "calc(100% - 190px)",
-            filter: "blur(1px)",
-            width: "400px",
-            height: "400px",
-          }}
-        ></Shape>
+              <div
+                style={{ display: "flex", aspectRatio: "11/5.7" }}
+                className="project-img-container"
+              >
+                <img
+                  src={projects.srcs[index]}
+                  alt=""
+                  style={{ width: "100%" }}
+                />
+              </div>
+              <div className="m-card-content">
+                <p className="m-card-description">
+                  {projects.discriptions[index]}
+                </p>
+              </div>
+            </div>
+          </>
+        ))}
+
+        <div className="projectbrCr">
+          <Shape
+            style={{
+              left: "calc(100% - 190px)",
+              top: "calc(100% - 190px)",
+              filter: "blur(1px)",
+              width: "400px",
+              height: "400px",
+            }}
+          ></Shape>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
@@ -365,11 +364,10 @@ export function SocialMedia() {
     <>
       <div className="socil-side">
         <div className="belowIcons">
-          <h2>Contact/Follow me</h2>
+          <h2>Contact / Follow me</h2>
         </div>
-
-        <div className="social-media">
-          {social.name.map((nm, i) => (
+        {/* <div className="social-media"> */}
+        {/* {social.name.map((nm, i) => (
             <div>
               {" "}
               <a
@@ -383,8 +381,9 @@ export function SocialMedia() {
               </a>
               <p>{nm}</p>
             </div>
-          ))}
-        </div>
+          ))} */}
+        <SocialIcons></SocialIcons>
+        {/* </div> */}
       </div>
     </>
   );

@@ -1,7 +1,7 @@
 import "./skill.css";
 import { Cube } from "./background";
 // import sklimg from "./public/Screenshot_2025-03-19_162455-removebg-preview.png";
-import sklimg from "./public/WhatsApp Image 2025-03-31 at 17.44.36_cfd9d5a9.jpg";
+import sklimg from "./public/Screenshot_2025-03-19_162455-removebg-preview.png";
 
 export default function Skills() {
   return (
@@ -16,7 +16,7 @@ export default function Skills() {
             databases, and cloud services to create efficient, user-friendly,
             and secure solutions.
           </div>
-          <div className="dev-img">
+          <div className="dev-img skill-imgs">
             <img src={sklimg} alt="" />
           </div>
         </div>
@@ -67,13 +67,12 @@ export default function Skills() {
 export function SkillCmponent({ ht, wd, nm, svg }) {
   return (
     <>
-      <div className="skill" style={{ height: ht, width: wd }}>
-        <div className="divSvg">
-          {/* <iframe src={`./src/asset/${svg}.svg`} frameborder="0"></iframe> */}
-
+      <div class="button-div">
+        <div className="upload-btn" style={{ height: ht, width: wd }}>
           {svg}
+          {/* <div className="divSvg"></div> */}
         </div>
-        <span>{nm}</span>
+        {/* <span>{nm}</span> */}
       </div>
     </>
   );
@@ -379,12 +378,12 @@ export function WheelSkill() {
   ];
 
   return (
-    <div className="wheelCr">
+    <div className="div-pr">
       {nms.map((item, index) => (
         <SkillCmponent key={index} wd="" ht="" nm={item} svg={SVGs[index]} />
       ))}
 
-      <div className="verticleLine"></div>
+      {/* <div className="verticleLine"></div> */}
     </div>
   );
 }

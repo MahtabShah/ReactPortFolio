@@ -1,0 +1,170 @@
+:root {
+  --ach-padding: 3%;
+  --ach-gap: 10%;
+  --ach-border-radius: 10px;
+  --ach-aspect-ratio: 22/15;
+  --ach-bg-color: rgb(253, 247, 255);
+  --ach-box-shadow: 0 0 5px rgba(28, 47, 53, 0.836);
+  --ach-width-max: 600px;
+  --ach-width-min: 40vw;
+  --ach-width-clamp: calc(min(var(--ach-width-max), var(--ach-width-min)));
+  --ach-position-left: clamp(30px, 20vw, 600px);
+  --ach-position-right: clamp(30px, 20vw, 600px);
+}
+
+.main {
+  background: linear-gradient(0deg, #fcfcfc, #f3f3f3);
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 0 20px rgb(115, 115, 115);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.parent {
+  position: relative;
+  overflow: hidden;
+  /* border: 2px solid rgb(255, 0, 0); */
+  height: clamp(200px, calc(120px + 40vw), 500px);
+}
+
+.box-content {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.slanted-box {
+  width: 700px;
+  height: clamp(200px, calc(120px + 40vw), 500px);
+  position: absolute;
+  box-shadow: 0px 0px 10px 15px rgba(20, 19, 19, 0.326);
+  transition: transform 1s ease, clip-path 1s ease;
+  z-index: 4;
+  /* border: 2px solid rgb(255, 0, 0); */
+}
+
+.leftdoor {
+  background: linear-gradient(to right, #f2f0f0, #ededed);
+  left: -350px;
+  clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 100%);
+}
+
+.rightdoor {
+  background: linear-gradient(to left, #f3f0f0, #f1efef);
+  right: -350px;
+  clip-path: polygon(0% 0%, 50% 0, 50% 100%, 0% 100%);
+}
+
+/* */
+
+.count_dot {
+  /* border: 2px solid red; */
+  color: rgb(33, 33, 33);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+  padding: 14px;
+  bottom: 0;
+  height: 50px;
+}
+
+.first {
+  /* position: relative; */
+  width: 70%;
+  height: 70%;
+  overflow: hidden;
+  background-color: transparent;
+  /* border: 2px solid red; */
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.box {
+  height: 100%;
+  /* border: 2px solid red; */
+  transition: all 1s ease-in-out;
+  position: absolute;
+  /* box-shadow: 0 0 10px 0px #a8a8a8; */
+  /* transform: scale(1.05); Default position */
+  border-radius: 10px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  background: transparent;
+  transition: transform 0.4s ease;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  bottom: 5px;
+  gap: 100px;
+}
+
+.controls button {
+  /* all: initial; */
+  /* border: 1px solid red; */
+  border-radius: 50%;
+  height: 40px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 40px;
+  padding: 4px;
+  font-size: 1.5rem;
+  color: rgb(30, 31, 31);
+  background: radial-gradient(circle at center, #f2d0f9 0%, #fffcfc 100%);
+  box-shadow: 0 0 5px;
+  /* transform: scale(1.05); */
+  transition: 0.2s ease-in-out;
+}
+
+.controls button:hover {
+  box-shadow: 0 0 2px;
+  transform: scale(1);
+}
+
+.Cirtificate {
+  transition: transform 0.3s;
+  border: 1px solid rgba(31, 31, 31, 0.041);
+  box-shadow: 0 0 10px 2px #a8a8a8;
+  transition: all 0.3s ease;
+  /* transform: scale(1.05); */
+  border-radius: 10px;
+  height: 100%;
+}
+
+.Cirtificate:hover {
+  box-shadow: 0 0 4px #a8a8a8;
+  transform: scale(1); /* Default position */
+}
+
+.bg-2 {
+  background-color: var(--ach-bg-color);
+  background: linear-gradient(to bottom, #eee4ff, #fbf1fe);
+}
+
+/* @media screen and (min-width: 700px) and (max-width: 1024px) {
+  .Cirtificate {
+    margin: 4% 0;
+  }
+}
+*/
+
+@media screen and (max-width: 700px) {
+  .cf-2 {
+    flex-direction: column !important;
+  }
+}
