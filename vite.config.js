@@ -5,3 +5,5 @@ export default defineConfig({
   plugins: [react()],
   base: "/ReactPortFolio/", // IMPORTANT: Use only the repo name with slashes
 });
+
+
