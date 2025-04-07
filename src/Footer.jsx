@@ -20,7 +20,7 @@ export default function FooTer() {
             2. Web Development Workshop from <b>AADI Foundation.</b>
           </p>
         </div>
-        <div className="m-2 p-2 pb-5 d-flex gap-3 cf-2 justify-content-around align-items-center flex-row">
+        <div className="p-2 pb-5 d-flex gap-3 cf-2 justify-content-around align-items-center flex-row">
           <BoxSlider />
         </div>
       </div>

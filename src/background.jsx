@@ -9,6 +9,7 @@ import img2 from "./asset/Screenshot 2025-01-27 130757.png";
 import img3 from "./asset/Screenshot 2025-03-29 134648.png";
 import img4 from "./asset/Screenshot 2025-01-27 195704.png";
 import img5 from "./asset/Screenshot 2025-03-30 211852.png";
+import img6 from "./asset/Screenshot 2025-04-07 210700.png";
 import SocialIcons from "./SocialIcon";
 import pdf from "./public/MAHTAB SHAH LRU+.pdf";
 import "./Project.css";
@@ -208,6 +209,7 @@ const ProjectsData = {
     "DIGITAL ONLINE OFFLINE MARKET",
     "SORTING VISUALIZER WEB APP",
     "PORTFOLIO WEBSITE",
+    "REGEX TASTER AND GENERATOR",
   ],
 
   discriptions: [
@@ -257,9 +259,14 @@ const ProjectsData = {
       Fully Responsive and simple UI has been used in this portfolio website.{" "}
       {<br />}
     </>,
+    <>
+      This tool helps you quickly generate random strings and test your regular
+      expressions. {<br />} Enter starting and ending characters to generate a
+      random string, then use regex to extract matching patterns in real-time.
+    </>,
   ],
 
-  srcs: [img1, img2, img3, img4, img5],
+  srcs: [img1, img2, img3, img4, img5, img6],
 };
 
 export function Projects({ projects }) {

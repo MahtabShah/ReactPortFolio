@@ -16,6 +16,10 @@
   --skl-info-border: 2px solid rgb(236, 39, 233);
 }
 
+h2 {
+  text-shadow: 1px 5px 15px #4e4e4ec7;
+}
+
 .ftr {
   background: transparent;
   background: linear-gradient(0deg, #fcfcfc, #f3f3f3);
@@ -28,6 +32,17 @@
   display: flex;
   padding: var(--skl-padding);
   gap: var(--skl-gap);
+}
+
+.skill-rd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-rd span {
+  color: rgb(59, 59, 59);
 }
 
 .skill {
@@ -98,6 +113,8 @@
 .dev-img {
   display: flex;
   justify-content: center;
+  /* border: 2px solid red; */
+  /* margin: calc(80px - 2vw); */
 }
 
 .skill-imgs {
@@ -107,7 +124,9 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   padding: 20px 40px;
-  margin-top: 40px;
+  margin-top: 60px;
+  width: 70%;
+  align-self: center;
 }
 
 .dev-img img {
@@ -118,9 +137,11 @@
 
 .infoSkilss {
   /* border-right: var(--skl-info-border); */
-  width: 50%;
+  width: 44%;
   z-index: 10;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
 }
 
 .h2div,
@@ -129,8 +150,9 @@
   font-weight: var(--skl-font-weight);
   color: var(--skl-title-color);
   text-align: center;
-  text-shadow: 1px 1px 4px;
+  /* text-shadow: 1px 1px 40px 30px black; */
   padding: var(--skl-padding);
+  /* border: 2px solid red; */
 }
 
 .skillDiscription,
@@ -142,16 +164,24 @@
   background: linear-gradient(0deg, #080808, #060606);
   color: transparent;
   background-clip: text;
-  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 5px 15px #2b2b2ba4;
+  color: #3d3d3d;
 
+  /* text-shadow: 0 5px 10px 20px rgba(0, 0, 0, 0.721); */
   /* border: 1px solid rgba(31, 31, 31, 0.041); */
 }
 
-.h2div {
-  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+span {
+  text-shadow: 1px 10px 15px #343333d0;
 }
 
-@media (max-width: 1000px) {
+.h2div {
+  text-shadow: 1px 5px 15px #343333;
+
+  /* text-shadow: 0 5px 10px 20px rgba(0, 0, 0, 0.817); */
+}
+
+@media (max-width: 1200px) {
   .skills {
     flex-direction: column;
   }
@@ -182,10 +212,6 @@ svg {
   width: 50px;
   display: flex;
   justify-content: center;
-}
-
-.skill span {
-  color: rgb(72, 72, 72);
 }
 
 .wheelCr {
@@ -219,12 +245,12 @@ svg {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: clamp(10px, calc(10px + 5vw), 80px);
+  gap: clamp(10px, calc(10px - 4% + 10vw), 80px);
   align-items: center;
   /* margin: 20px; */
   /* border: 2px solid red; */
-  padding: 20px 0px;
-  max-width: 900px;
+  padding-bottom: 80px;
+  /* max-width: 900px; */
 }
 
 .button-div {
@@ -232,7 +258,7 @@ svg {
   /* background: linear-gradient(0deg, #ffffff, #f1f1f1); */
   border-radius: 10%;
   position: relative;
-  padding: 20px;
+  padding: 15px;
 }
 
 .button-div svg {
@@ -248,8 +274,8 @@ svg {
 .upload-btn {
   background: linear-gradient(0deg, #dddddd, #ffffff);
   border: 1px solid rgba(31, 31, 31, 0.041);
-  height: calc(120px - 2vw);
-  width: calc(120px - 2vw);
+  height: calc(110px - 2vw);
+  width: calc(110px - 2vw);
   font-size: 18px;
   cursor: pointer;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
@@ -269,6 +295,7 @@ svg {
   justify-content: center;
   transform: scale(1.05); /* Default position */
   transition: all 0.3s ease;
+
   font-weight: 500;
   /* top: calc(50% - 11px); */
 }

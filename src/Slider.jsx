@@ -59,11 +59,11 @@ const BoxSlider = () => {
       "polygon(50% 0%, 100% 20%, 100% 80%, 50% 100%)";
     rightDoorRef.current.style.clipPath =
       "polygon(0% 20%, 50% 0, 50% 100%, 0% 80%)";
-    leftDoorRef.current.style.transform = "rotateY(-85deg)";
-    rightDoorRef.current.style.transform = "rotateY(85deg)";
+    leftDoorRef.current.style.transform = "rotateY(-90deg)";
+    rightDoorRef.current.style.transform = "rotateY(90deg)";
     setTimeout(() => {
       firstRef.current.style.transform = "scale(1)";
-    }, 400);
+    }, 540);
   };
 
   const closeDoor = () => {
@@ -110,34 +110,9 @@ const BoxSlider = () => {
   const img = [img1, img2, img3];
 
   return (
-    <div className="main">
+    <div className="main" data-aos="flip-up">
       <div className="parent" ref={parentRef}>
         <div className="slanted-box leftdoor" ref={leftDoorRef}></div>
-
-        <div className="controls">
-          <button
-            id="backBtn"
-            className="btn"
-            onClick={() => {
-              clearInterval(intervalRef.current);
-              prevBox();
-              autoSlide();
-            }}
-          >
-            <FontAwesomeIcon icon={faArrowLeft} />
-          </button>
-          <button
-            id="nextBtn"
-            className="btn"
-            onClick={() => {
-              clearInterval(intervalRef.current);
-              nextBox();
-              autoSlide();
-            }}
-          >
-            <FontAwesomeIcon icon={faArrowRight} />
-          </button>
-        </div>
 
         <div className="slanted-box rightdoor" ref={rightDoorRef}></div>
 
@@ -154,13 +129,31 @@ const BoxSlider = () => {
               </div>
             ))}
           </div>
-
-          <div className="count_dot">
-            <span>o</span>
-            <span>o</span>
-            <span>o</span>
-          </div>
         </div>
+      </div>
+      <div className="controls">
+        <button
+          id="backBtn"
+          className="btn"
+          onClick={() => {
+            clearInterval(intervalRef.current);
+            prevBox();
+            autoSlide();
+          }}
+        >
+          <FontAwesomeIcon icon={faArrowLeft} />
+        </button>
+        <button
+          id="nextBtn"
+          className="btn"
+          onClick={() => {
+            clearInterval(intervalRef.current);
+            nextBox();
+            autoSlide();
+          }}
+        >
+          <FontAwesomeIcon icon={faArrowRight} />
+        </button>
       </div>
     </div>
   );

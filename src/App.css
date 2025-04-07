@@ -71,9 +71,9 @@
     rgb(250, 240, 252)
   );
   --background-gradient-4: linear-gradient(
-    to bottom,
-    rgb(253, 244, 255) 30%,
-    rgb(245 248 255)
+    30deg,
+    rgb(245, 245, 245),
+    rgb(243, 243, 243)
   );
 }
 

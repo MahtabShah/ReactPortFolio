@@ -8,10 +8,6 @@ export default function Achive() {
   return (
     <>
       <div className="Achived-Section">
-        {/* <Cirtificate images={img[0]} style={{ alignSelf: "end" }} />
-        <Cirtificate images={img[1]} />
-        <Cirtificate images={img[2]} /> */}
-
         <div class="main">
           <div class="parent">
             <div class="slanted-box leftdoor">&lt;</div>
@@ -23,7 +19,6 @@ export default function Achive() {
                 <i class="fa-solid fa-arrow-right"></i>
               </button>
             </div>
-
             <div class="slanted-box rightdoor">&gt;</div>
 
             <div class="box-content">
