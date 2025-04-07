@@ -1,5 +1,8 @@
 import "./skill.css";
 import { Cube } from "./background";
+import { v4 as uuidv4 } from "uuid";
+import "aos/dist/aos.css";
+
 // import sklimg from "./public/Screenshot_2025-03-19_162455-removebg-preview.png";
 import sklimg from "./public/Screenshot_2025-03-19_162455-removebg-preview.png";
 
@@ -9,14 +12,14 @@ export default function Skills() {
       <div className="skills">
         <div className="infoSkilss">
           <div className="h2div sklvl">SKILL PROFICIANCY</div>
-          <div className="skillDiscription">
+          <div className="skillDiscription" data-aos="flip-down">
             Proficient in designing, developing, and deploying scalable web
             applications, with expertise in both front-end and back-end
             technologies. Experienced in working with modern frameworks,
             databases, and cloud services to create efficient, user-friendly,
             and secure solutions.
           </div>
-          <div className="dev-img skill-imgs">
+          <div className="dev-img skill-imgs" data-aos="zoom-out-up">
             <img src={sklimg} alt="" />
           </div>
         </div>
@@ -67,8 +70,18 @@ export default function Skills() {
 export function SkillCmponent({ ht, wd, nm, svg }) {
   return (
     <>
-      <div class="button-div">
-        <div className="upload-btn" style={{ height: ht, width: wd }}>
+      <div
+        class="button-div"
+        key={uuidv4()}
+        data-aos="flip-up"
+        data-aos-duration="600"
+        data-aos-easing="ease-out"
+      >
+        <div
+          className="upload-btn"
+          // data-aos="flip-down"
+          style={{ height: ht, width: wd }}
+        >
           {svg}
           {/* <div className="divSvg"></div> */}
         </div>

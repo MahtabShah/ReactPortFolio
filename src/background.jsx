@@ -1,6 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 // import Form from "./Form";
 // import CodePage from "./Code.env";
+import { v4 as uuidv4 } from "uuid";
+import "aos/dist/aos.css";
 import "./App.css";
 import img1 from "./asset/Screenshot 2025-01-27 194133.png";
 import img2 from "./asset/Screenshot 2025-01-27 130757.png";
@@ -62,9 +64,13 @@ export function Page() {
           ))}
           <a
             href={pdf}
+            key={uuidv4()}
             download="Mahtab_Shah_Resume.pdf"
             className="btn text-white btn-outline-info header-item"
             style={{ fontSize: "var(--vr-f)", padding: "5px 4px" }}
+            data-aos="zoom-up"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-easing="ease-out"
           >
             Get Resume
           </a>
@@ -72,22 +78,27 @@ export function Page() {
 
         <div className="m">
           <div className="introduction">
-            <span> Hi, I'm</span>
+            <span key={uuidv4()} data-aos="zoom-up">
+              {" "}
+              Hi, I'm
+            </span>
             <br />
-            <span className="name">Mahtab Shah</span>
+            <span className="name" key={uuidv4()} data-aos="zoom-in">
+              Mahtab Shah
+            </span>
             <hr />
-            <span className="h2-type">
+            <span className="h2-type" key={uuidv4()} data-aos="fade-up">
               Web Developer, Programer, Web disigner
             </span>
-            <p>
+            <p key={uuidv4()} data-aos="fade-up" data-aos-duration="800">
               I am pursuing a Bachelor of Technology in Electrical Engineering
               from IIT (ISM) Dhanbad.
             </p>
-            <p>
+            <p key={uuidv4()} data-aos="fade-up" data-aos-duration="1000">
               As a software developer i play to find deep concept behind
               software technologies or related fields.
             </p>
-            <p>
+            <p key={uuidv4()} data-aos="fade-up" data-aos-duration="1200">
               My mission is to design and develop a website that you and your
               audience love.
             </p>
@@ -97,13 +108,16 @@ export function Page() {
                 href={pdf}
                 download="Mahtab_Shah_Resume.pdf"
                 className="btn btn-outline-danger btn-shadow"
+                key={uuidv4()}
+                data-aos-duration="2000"
+                data-aos="zoom-in"
               >
                 Get Resume
               </a>
             </div>
           </div>
-          <div className="ph">
-            <div className="photo"></div>
+          <div className="ph" key={uuidv4()}>
+            <div className="photo" data-aos="zoom-in"></div>
           </div>
         </div>
 
@@ -251,11 +265,20 @@ const ProjectsData = {
 export function Projects({ projects }) {
   return (
     <>
-      <span className="nmProject p-2 rounded ">PROJECTS</span>
+      <span className="nmProject p-2 rounded" key={uuidv4()} data-aos="zoom-in">
+        PROJECTS
+      </span>
       <div className="proj-c project-container">
         {projects.titles.map((t, index) => (
           <>
-            <div key={index} className="m-card project-card">
+            <div
+              key={index}
+              className="m-card project-card"
+              data-aos="flip-left"
+              data-aos-duration="1000"
+              data-aos-anchor-placement="top-bottom"
+              data-aos-easing="ease-out"
+            >
               <h2 key={index} className="m-card-title">
                 {t}
               </h2>

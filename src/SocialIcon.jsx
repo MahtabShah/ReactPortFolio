@@ -1,5 +1,6 @@
 import React from "react";
 import "./SocialIcons.css";
+import { v4 as uuidv4 } from "uuid";
 
 const SocialIcons = () => {
   const icons = [
@@ -12,9 +13,15 @@ const SocialIcons = () => {
 
   return (
     <ul className="social-icons">
-      {icons.map((icon) => (
+      {icons.map((icon, i) => (
         <li key={icon.name}>
-          <a href={icon.link}>
+          <a
+            href={icon.link}
+            key={uuidv4()}
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration={400 + i * 500}
+          >
             <i className={`fa fa-${icon.name}`} aria-hidden="true"></i>
           </a>
         </li>
