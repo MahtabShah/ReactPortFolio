@@ -121,7 +121,7 @@ export function Projects({ projects }) {
           </>
         ))}
 
-        <div className="projectbrCr">
+        {/* <div className="projectbrCr">
           <Shape
             style={{
               left: "calc(100% - 190px)",
@@ -131,7 +131,7 @@ export function Projects({ projects }) {
               height: "400px",
             }}
           ></Shape>
-        </div>
+        </div> */}
       </div>
     </>
   );

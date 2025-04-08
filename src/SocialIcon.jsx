@@ -21,8 +21,13 @@ const SocialIcons = () => {
             data-aos="flip-left"
             data-aos-easing="ease-out-cubic"
             data-aos-duration={100 + i * 400}
+            data-aos-offset="10"
           >
-            <i className={`fa fa-${icon.name}`} aria-hidden="true"></i>
+            <i
+              key={uuidv4()}
+              className={`fa fa-${icon.name}`}
+              aria-hidden="true"
+            ></i>
           </a>
         </li>
       ))}

@@ -47,7 +47,12 @@ export default function Page() {
               Mahtab Shah
             </span>
             <hr />
-            <span className="h2-type mb-4" key={uuidv4()} data-aos="fade-up">
+            <span
+              className="h2-type mb-4"
+              key={uuidv4()}
+              data-aos="fade-up"
+              data-aos-offset="10"
+            >
               Web Developer, Programer, Web designer
             </span>
             <p
@@ -55,6 +60,7 @@ export default function Page() {
               className="text"
               data-aos="fade-up"
               data-aos-duration="500"
+              data-aos-offset="40"
             >
               I am pursuing a Bachelor of Technology in Electrical Engineering
               from IIT (ISM) Dhanbad.
@@ -63,6 +69,7 @@ export default function Page() {
               key={uuidv4()}
               data-aos="fade-up"
               data-aos-duration="700"
+              data-aos-offset="50"
               className="text"
             >
               As a software developer i play to find deep concept behind
@@ -86,6 +93,7 @@ export default function Page() {
                 key={uuidv4()}
                 data-aos-duration="900"
                 data-aos="zoom-in"
+                data-aos-offset="10"
               >
                 Get Resume
               </a>

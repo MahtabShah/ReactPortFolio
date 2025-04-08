@@ -402,3 +402,9 @@ export function Shape({ style }) {
     </>
   );
 }
+
+// git add .
+// git commit -m "Initial commit"
+// git push origin main
+// npm run build
+// npm run deploy

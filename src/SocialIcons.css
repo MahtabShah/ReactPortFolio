@@ -15,10 +15,12 @@ ul {
   z-index: 100;
   flex-wrap: wrap;
   gap: 20px;
+  /* border: 2px solid red; */
 }
 
 ul li {
   list-style: none;
+  flex-grow: 1;
 }
 
 ul li a {

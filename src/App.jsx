@@ -25,6 +25,7 @@ const App = () => {
       duration: 400,
       easing: "ease-out",
       once: false,
+      offset: 50,
     });
 
     AOS.refresh();
