@@ -48,7 +48,7 @@ export default function Page() {
             </span>
             <hr />
             <span className="h2-type mb-4" key={uuidv4()} data-aos="fade-up">
-              Web Developer, Programer, Web disigner
+              Web Developer, Programer, Web designer
             </span>
             <p
               key={uuidv4()}
@@ -84,7 +84,7 @@ export default function Page() {
                 download="Mahtab_Shah_Resume.pdf"
                 className="btn btn-outline-danger btn-shadow"
                 key={uuidv4()}
-                data-aos-duration="1000"
+                data-aos-duration="900"
                 data-aos="zoom-in"
               >
                 Get Resume

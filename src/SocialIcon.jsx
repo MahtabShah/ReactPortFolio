@@ -20,7 +20,7 @@ const SocialIcons = () => {
             key={uuidv4()}
             data-aos="flip-left"
             data-aos-easing="ease-out-cubic"
-            data-aos-duration={400 + i * 500}
+            data-aos-duration={100 + i * 400}
           >
             <i className={`fa fa-${icon.name}`} aria-hidden="true"></i>
           </a>

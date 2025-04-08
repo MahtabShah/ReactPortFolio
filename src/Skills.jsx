@@ -26,15 +26,6 @@ export default function Skills() {
           <WheelSkill></WheelSkill>
         </div>
 
-        <Cube
-          dim={{
-            width: "40px",
-            height: "40px",
-            left: "26%",
-            top: "70%",
-          }}
-        />
-
         <div className="shapC">
           <Shape
             style={{
@@ -60,18 +51,12 @@ export function SkillCmponent({ ht, wd, nm, svg }) {
         class="button-div"
         key={uuidv4()}
         data-aos="flip-up"
-        data-aos-duration="600"
+        data-aos-duration="400"
         data-aos-easing="ease-out"
       >
-        <div
-          className="upload-btn"
-          // data-aos="flip-down"
-          style={{ height: ht, width: wd }}
-        >
+        <div className="upload-btn" style={{ height: ht, width: wd }}>
           {svg}
-          {/* <div className="divSvg"></div> */}
         </div>
-        {/* <span>{nm}</span> */}
       </div>
     </>
   );

@@ -1,16 +1,10 @@
 .all-right {
-  /* min-height: 94vh; */
-  color: var(--t-clr1);
   display: flex;
   flex-direction: column;
   justify-content: end;
-  background-color: var(--hdr-clr);
   overflow: hidden;
-  padding-top: 80px;
-  background: repeating-linear-gradient(90deg, #831ddc, #7c1bd1);
-
-  /* border: 2px solid red; */
-  /* background-size: 100vw; */
+  background: linear-gradient(to bottom, #f1ecf3, #dcdbde);
+  color: #3d3d3d;
 }
 
 .msgSocialMedia {
@@ -24,38 +18,46 @@
 
 .msgbox {
   /* border: 2px solid rgb(243, 8, 8); */
-  box-shadow: 0 0 2px rgb(194, 190, 190);
+  background: repeating-linear-gradient(0deg, #f6f6f6, #fdfdfd);
   flex-grow: 1;
   max-width: 760px;
-  padding: 3%;
+  padding: 2%;
+  border-radius: 10px;
 }
 
 .msgbox form {
-  background-color: rgba(240, 248, 255, 0.002);
   border: none;
   max-width: initial;
+  /* border: 2px solid rgb(243, 8, 8); */
+  background: repeating-linear-gradient(0deg, #fdfdfd, #f1f1f1);
+  border-radius: 5px;
+  padding: 2%;
+}
 
-  /* color: rgb(55, 54, 54); */
+#exampleInputEmail1 {
+  background: repeating-linear-gradient(0deg, #ffffff, #f1f1f1);
 }
 
 .textarea {
   height: 20vh;
   background-color: rgba(250, 251, 251, 0);
-  color: antiquewhite;
+  color: rgb(54, 54, 54);
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35); */
+  background: repeating-linear-gradient(0deg, #ffffff, #f1f1f1);
 }
 
 .textarea:focus {
   background-color: rgba(0, 255, 255, 0);
-  caret-color: aliceblue;
-  color: antiquewhite;
+  caret-color: rgb(22, 22, 22);
+  color: rgb(47, 47, 47);
 }
 
 .socil-side {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  border: 1px solid rgba(132, 133, 140, 0.789);
-  padding: 20px;
+  /* border: 1px solid rgba(132, 133, 140, 0.789); */
+  /* background: repeating-linear-gradient(0deg, #ffffff, #f1f1f1); */
 }
 
 .social-media {
@@ -85,7 +87,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(215, 197, 197);
+  color: rgb(96, 96, 96);
   border: 2px solid rgb(213, 101, 247);
   max-width: 80px;
   /* width: clamp(20px, 3vw, 80px); */
@@ -114,6 +116,11 @@
   padding: 10px;
   font-family: sans-serif;
   font-weight: 800;
+  background: repeating-linear-gradient(0deg, #ffffff, #f1f1f1);
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.204);
+  margin-bottom: 20px;
 }
 
 .all-right p {

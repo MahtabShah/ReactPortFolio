@@ -97,16 +97,6 @@ body {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3) !important;
 }
 
-.code-about {
-  min-width: 400px;
-  display: flex;
-  flex-direction: column;
-  margin: 30px 20px 30px 0;
-  font-size: clamp(2px, calc(0.878vw + 40%), 1rem);
-  box-shadow: var(--u-bxshdw);
-  height: fit-content;
-}
-
 .i {
   height: 200px;
   object-fit: cover;
@@ -223,71 +213,6 @@ body {
   background: repeating-linear-gradient(220deg, #5712ab, #5031d8, #250f7a);
 }
 
-/* Circles */
-.cricle {
-  position: absolute;
-  width: var(--circle-size);
-  height: var(--circle-size);
-  border-radius: 50%;
-  left: clamp(-200px, -10vw, -40px);
-  top: clamp(-200px, -10vw, -40px);
-  background: repeating-linear-gradient(
-    34deg,
-    rgb(226, 133, 12),
-    #8a24e380,
-    #973de580
-  );
-  z-index: 2;
-  box-shadow: var(--shadow-main);
-  filter: blur(5px);
-  display: none;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
-}
-
-.aboveCircle {
-  position: absolute;
-  z-index: 3;
-  width: calc(100% + 50px);
-  height: calc(100% + 50px);
-  left: -40px;
-  top: -40px;
-  backdrop-filter: blur(5px);
-  background: transparent;
-  display: none;
-}
-
-.bottomCircle {
-  position: absolute;
-  z-index: 3;
-  height: var(--large-circle-size);
-  width: var(--large-circle-size);
-  left: calc(50% - 120px);
-  bottom: -180px;
-  border-radius: 50%;
-  background: var(--highlight-gradient);
-  box-shadow: var(--shadow-secondary);
-  filter: blur(1px);
-  display: none;
-}
-
-.midCircle {
-  position: absolute;
-  z-index: 2;
-  height: 140px;
-  width: 140px;
-  left: calc(50% - 60px);
-  bottom: calc(50% - 60px);
-  border-radius: 50%;
-  background: repeating-linear-gradient(
-    40deg,
-    rgb(16, 0, 28),
-    #6702c0f2,
-    #8e02f9f2
-  );
-  box-shadow: var(--shadow-secondary);
-  display: none;
-}
-
 .rtcr {
   position: absolute;
   width: clamp(100px, 40vw, 300px);
@@ -299,7 +224,7 @@ body {
   z-index: 3;
   backdrop-filter: blur(4px);
   box-shadow: var(--shadow-small);
-  display: none;
+  /* display: none; */
 }
 
 .ssCr {
@@ -308,12 +233,11 @@ body {
   height: var(--small-circle-size);
   border-radius: 50%;
   left: clamp(70px, 10vw, 600px);
-  top: clamp(70px, 50vw, 600px);
+  top: clamp(70px, 30vw, 600px);
   background: repeating-linear-gradient(80deg, rgb(212, 157, 18), #9b2efb80);
-  z-index: 3;
   backdrop-filter: blur(4px);
-  opacity: 0.9;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  z-index: 100;
 }
 
 .sCr {

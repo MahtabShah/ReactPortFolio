@@ -63,7 +63,7 @@ const BoxSlider = () => {
     rightDoorRef.current.style.transform = "rotateY(90deg)";
     setTimeout(() => {
       firstRef.current.style.transform = "scale(1)";
-    }, 540);
+    }, 100);
   };
 
   const closeDoor = () => {
@@ -94,7 +94,7 @@ const BoxSlider = () => {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.3 }
     );
 
     if (parentRef.current) {
@@ -110,7 +110,7 @@ const BoxSlider = () => {
   const img = [img1, img2, img3];
 
   return (
-    <div className="main" data-aos="flip-up">
+    <div className="main" data-aos="flip-up" data-aos-duration="400">
       <div className="parent" ref={parentRef}>
         <div className="slanted-box leftdoor" ref={leftDoorRef}></div>
 

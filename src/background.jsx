@@ -62,7 +62,7 @@ export function Cube({ dim }) {
 export function Footer() {
   return (
     <>
-      <div className="all-right">
+      <div className="all-right contact">
         <div className="msgSocialMedia">
           <Massage></Massage>
           <SocialMedia></SocialMedia>
@@ -77,11 +77,16 @@ import "./msg.css";
 export function Massage() {
   return (
     <>
-      <div className="msgbox contact">
+      <div
+        className="msgbox"
+        data-aos="flip-up"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="600"
+      >
         <form>
           <div className="ms-bar ms-bar3"></div>
           <div className="ms-what-sl">
-            <b>Massage</b>
+            <b className="">Massage</b>
           </div>
 
           <div className="mb-3">
@@ -94,7 +99,7 @@ export function Massage() {
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
             />
-            <div id="emailHelp" className="form-text" style={{ color: "#ded" }}>
+            <div id="emailHelp" className="form-text">
               We'll never share your email with anyone else.
             </div>
           </div>
@@ -140,28 +145,16 @@ export function SocialMedia() {
   };
   return (
     <>
-      <div className="socil-side">
+      <div
+        className="socil-side align-items-center"
+        data-aos="flip-up"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="600"
+      >
         <div className="belowIcons">
-          <h2 className="heading">Contact / Follow me</h2>
+          <h2 className="text">Contact / Follow me</h2>
         </div>
-        {/* <div className="social-media"> */}
-        {/* {social.name.map((nm, i) => (
-            <div>
-              {" "}
-              <a
-                href={social.links[i]}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={nm}
-                key={i}
-              >
-                <i className={`fab fa-${nm}`}></i>
-              </a>
-              <p>{nm}</p>
-            </div>
-          ))} */}
         <SocialIcons></SocialIcons>
-        {/* </div> */}
       </div>
     </>
   );
