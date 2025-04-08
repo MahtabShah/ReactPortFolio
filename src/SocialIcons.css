@@ -5,22 +5,20 @@ body {
 }
 
 ul {
-  /* position: absolute; */
-  top: 50%;
-  left: 50%;
-  /* transform: translate(-50%, -50%); */
-  display: flex;
   margin: 0;
-  padding: 0;
+  padding: 10px;
   z-index: 100;
-  flex-wrap: wrap;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   gap: 20px;
   /* border: 2px solid red; */
 }
 
 ul li {
   list-style: none;
-  flex-grow: 1;
+  justify-self: center;
+  /* border: 2px solid red; */
 }
 
 ul li a {
