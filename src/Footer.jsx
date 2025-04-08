@@ -12,8 +12,8 @@ export default function FooTer() {
     <>
       <div className="bg-2 pb-4 d-flex flex-column">
         <div className="div-crt m-3 p-2 d-flex flex-column flex-grow-1">
-          <span className="h2div hdng">CIRTIFICATION</span>
-          <p className="p-2 pb-5 text-center paragraph">
+          <span className="h2div hdng text">CIRTIFICATION</span>
+          <p className="p-2 pb-5 text-center paragraph text">
             The course which i compleated.
             <br /> 1. C++ DSA cirtification from <b> APNA COLLAGE.</b>
             <br />

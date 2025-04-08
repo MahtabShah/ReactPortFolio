@@ -1,0 +1,173 @@
+.p {
+  background: linear-gradient(180deg, #ffffff, #eaeaea);
+  margin-top: 20px;
+  flex-flow: column nowrap;
+  /* border: 2px solid red; */
+  height: 90vh;
+}
+
+.header-item {
+  font-family: var(--font-family);
+  font-size: var(--vr-f);
+}
+
+.name {
+  font-family: math;
+  margin-left: -2px;
+  font-size: clamp(10px, 4vw, 4.4rem);
+}
+
+.h2-type {
+  font-size: clamp(9px, calc(4px + 1.42vw), 1.4rem);
+  font-weight: 700;
+}
+
+.hr {
+  height: clamp(12px, 12vw, 60px);
+  gap: clamp(2px, 4vw, 40px);
+  padding: 0 10px;
+  color: var(--t-clr1);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: var(--hdr-clr);
+  background: repeating-linear-gradient(90deg, #891aea, #7f11de);
+  z-index: 100;
+}
+
+.hr span:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+  text-shadow: 0 10px 15px rgba(148, 146, 146, 0.404);
+}
+
+#nm {
+  font-size: clamp(4px, 4vw, 2.4rem);
+  font-weight: 900;
+  background: repeating-linear-gradient(180deg, #ffffff 0%, #ff3c00 100%);
+  color: transparent;
+  background-clip: text;
+  font-family: math;
+}
+
+.m {
+  margin-top: clamp(12px, 12vw, 60px);
+  color: var(--u-blclr);
+  background: transparent;
+}
+
+.introduction {
+  font-size: var(--vr-f);
+  color: #161616;
+  z-index: 7;
+}
+
+.ph {
+  /* border: 2px solid red; */
+  z-index: 10;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #eaeaea, #ffffff);
+  width: clamp(100px, calc(100px + 27vw), 400px);
+  height: clamp(100px, calc(100px + 27vw), 400px);
+  align-items: center;
+  margin-top: 50px;
+}
+
+.my-img {
+  border-radius: 50%;
+  z-index: 5;
+  min-width: clamp(100px, calc(70px + 27vw), 400px);
+  min-height: clamp(100px, calc(70px + 27vw), 400px);
+  margin: calc(10px + 4vw);
+  background: linear-gradient(180deg, #ffffff, #eaeaea);
+}
+
+.my-img div {
+  width: clamp(100px, calc(100px + 20vw), 380px);
+  height: clamp(100px, calc(100px + 20vw), 380px);
+  padding: 20px;
+  border-radius: 50%;
+  background: url("./public/WhatsApp Image 2025-03-31 at 17.44.36_c0d9e4fe.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: clamp(100px, calc(100px + 25vw), 400px);
+}
+
+.dsr {
+  position: absolute;
+}
+
+@media (max-width: 1200px) {
+  .p {
+    height: auto;
+  }
+
+  .name {
+    font-size: clamp(24px, 8vw, 4.4rem);
+  }
+  .m {
+    flex-direction: column-reverse;
+    min-height: none;
+  }
+
+  .photo {
+    width: calc(min(100px, 81vw));
+    height: calc(min(100px, 81vw));
+    margin: auto;
+    margin-top: 30px;
+  }
+
+  .introduction {
+    font-size: var(--vr-fp);
+    z-index: 7;
+  }
+
+  .h2-type {
+    font-size: clamp(9px, calc(4px + 3.42vw), 1.4rem);
+    font-weight: 700;
+  }
+
+  .dsr {
+    flex-direction: column;
+  }
+
+  .code-about {
+    /* border: var(--bdr);s */
+    min-width: 0px;
+    display: flex;
+    flex-direction: column;
+    margin: 30px calc(4% - 7px) 20px 4%;
+    font-size: clamp(2px, 3vw, 1rem);
+
+    /* height: fit-content; */
+  }
+  .introduction {
+    text-align: center;
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+  .introduction span {
+    font-size: 1.2rem;
+  }
+  .introduction .name {
+    display: block;
+    font-size: 3rem;
+    margin: 10px 0;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  .introduction hr {
+    width: 50%;
+    margin: 20px auto;
+    border: 1px solid var(--primary-color);
+  }
+  .introduction .h2-type {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+  }
+  .introduction p {
+    margin: 10px auto;
+    max-width: 800px;
+  }
+}

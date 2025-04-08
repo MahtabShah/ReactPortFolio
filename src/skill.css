@@ -23,6 +23,7 @@ h2 {
 .ftr {
   background: transparent;
   background: linear-gradient(0deg, #fcfcfc, #f3f3f3);
+  /* border: 2px solid red; */
 }
 
 .skills {
@@ -114,18 +115,14 @@ h2 {
   display: flex;
   justify-content: center;
   /* border: 2px solid red; */
-  /* margin: calc(80px - 2vw); */
-}
-
-.skill-imgs {
-  /* border: 2px solid red; */
   padding: 30px 4px;
-  background: linear-gradient(0deg, #e8e7e7, #f8f6f6);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  /* background: linear-gradient(0deg, #e8e7e7, #f8f6f6); */
+  /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); */
   border-radius: 10px;
   padding: 20px 40px;
   margin-top: 60px;
-  width: 70%;
+  /* width: 70%; */
+  /* height: 80%; */
   align-self: center;
 }
 

@@ -2,29 +2,28 @@ import "./skill.css";
 import { Cube } from "./background";
 import { v4 as uuidv4 } from "uuid";
 import "aos/dist/aos.css";
-
-// import sklimg from "./public/Screenshot_2025-03-19_162455-removebg-preview.png";
+import CD from "./CD3di";
 import sklimg from "./public/Screenshot_2025-03-19_162455-removebg-preview.png";
 
 export default function Skills() {
   return (
-    <>
+    <div className="ftr">
       <div className="skills">
         <div className="infoSkilss">
-          <div className="h2div sklvl">SKILL PROFICIANCY</div>
-          <div className="skillDiscription" data-aos="flip-down">
+          <div className="h2div sklvl heading">SKILL PROFICIANCY</div>
+          <div className="skillDiscription text" data-aos="flip-down">
             Proficient in designing, developing, and deploying scalable web
             applications, with expertise in both front-end and back-end
             technologies. Experienced in working with modern frameworks,
             databases, and cloud services to create efficient, user-friendly,
             and secure solutions.
           </div>
-          <div className="dev-img skill-imgs" data-aos="zoom-out-up">
-            <img src={sklimg} alt="" />
+          <div className="dev-img" data-aos="zoom-out-up">
+            <CD></CD>
           </div>
         </div>
         <div className="skilicon">
-          <div className="h2div">SKILL SET</div>
+          <div className="h2div heading">SKILL SET</div>
           <WheelSkill></WheelSkill>
         </div>
 
@@ -63,7 +62,7 @@ export default function Skills() {
       </div>
 
       <div className="SVGlogo"></div>
-    </>
+    </div>
   );
 }
 

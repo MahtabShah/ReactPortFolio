@@ -1,0 +1,37 @@
+:root {
+  --tsh: #adadad;
+  --tclr: #ffffff;
+  /* --tsh: #bcbcbc; */
+  /* --tclr: #3e3e3e; */
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.text {
+  font-family: verdana;
+  font-weight: 700;
+  color: var(--tclr);
+  /* background: linear-gradient(0deg, #fff, #f7f7f7); */
+  text-shadow: 1px 0px 1px #919191, 1px 0.3px 1px #919191, 1px 0.6px 1px #919191,
+    1px 0.9px 1px #919191, 1px 1.2px 1px #919191, 1px 1.5px 1px #919191,
+    1px 1.8px 1px #919191, 1px 2.1px 1px #919191, 1px 2.4px 1px #919191,
+    1px 3px 1px #9f9f9f, 1px 3px 6px rgba(16, 16, 16, 0.4),
+    1px 3.4px 10px rgba(16, 16, 16, 0.1), 1px 3.6px 15px rgba(16, 16, 16, 0.2),
+    1px 10px 20px rgba(16, 16, 16, 0.4);
+}
+
+.heading {
+  text-transform: uppercase;
+  font-family: verdana;
+  font-weight: 700;
+  color: #ffffff;
+
+  text-shadow: 1px 0px 1px #919191, 1px 0.3px 1px #919191, 1px 0.6px 1px #919191,
+    1px 0.9px 1px #919191, 1px 1.2px 1px #919191, 1px 1.5px 1px #919191,
+    1px 1.8px 1px #919191, 1px 2.1px 1px #919191, 1px 2.4px 1px #919191,
+    1px 3px 1px #9f9f9f, 1px 3px 6px rgba(16, 16, 16, 0.4),
+    1px 3.4px 10px rgba(16, 16, 16, 0.1), 1px 3.6px 15px rgba(16, 16, 16, 0.2),
+    1px 10px 20px rgba(16, 16, 16, 0.4);
+}
