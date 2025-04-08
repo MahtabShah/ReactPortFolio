@@ -1,9 +1,16 @@
 import "./CD3di.css";
+import sklimg from "./public/Screenshot_2025-03-19_162455-removebg-preview.png";
 
 export default function CD() {
   return (
     <>
-      <svg
+      <img src={sklimg} alt="" />
+    </>
+  );
+}
+
+/*
+   <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
         width="4000"
@@ -39619,6 +39626,4 @@ export default function CD() {
           </g>
         </g>
       </svg>
-    </>
-  );
-}
+*/

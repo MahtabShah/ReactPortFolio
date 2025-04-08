@@ -3,7 +3,6 @@ import { Cube } from "./background";
 import { v4 as uuidv4 } from "uuid";
 import "aos/dist/aos.css";
 import CD from "./CD3di";
-import sklimg from "./public/Screenshot_2025-03-19_162455-removebg-preview.png";
 
 export default function Skills() {
   return (
@@ -36,8 +35,6 @@ export default function Skills() {
           }}
         />
 
-        {/* <div className="midCircle"></div> */}
-
         <div className="shapC">
           <Shape
             style={{
@@ -48,16 +45,6 @@ export default function Skills() {
               height: "500px",
             }}
           ></Shape>
-
-          {/* <Shape
-            style={{
-              left: "calc(100% - 300px)",
-              bottom: "calc(100% - 190px)",
-              filter: "blur(1px)",
-              width: "400px",
-              height: "400px",
-            }}
-          ></Shape> */}
         </div>
       </div>
 
