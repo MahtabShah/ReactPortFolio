@@ -9,6 +9,7 @@ const SocialIcons = () => {
     { name: "google-plus", link: "#" },
     { name: "linkedin", link: "#" },
     { name: "instagram", link: "#" },
+    { name: "github", link: "https://github.com/MahtabShah/" },
   ];
 
   return (
