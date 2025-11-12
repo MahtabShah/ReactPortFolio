@@ -7,8 +7,8 @@ const SocialIcons = () => {
     { name: "facebook", link: "#" },
     { name: "twitter", link: "#" },
     { name: "github", link: "https://github.com/MahtabShah/" },
-    { name: "linkedin", link: "#" },
-    { name: "instagram", link: "#" },
+    { name: "linkedin", link: "linkedin/mahtab-shah-916" },
+    { name: "instagram", link: "" },
     { name: "google-plus", link: "#" },
   ];
 
