@@ -80,14 +80,29 @@ const ProjectsData = {
 export function Projects({ projects }) {
   return (
     <>
-      <span
-        className="nmProject p-2 pe-3 ps-3 rounded text"
-        key={uuidv4()}
+      <div
+        className="sharp my-4 d-flex justify-content-center align-items-center"
+        style={{
+          height: "10px",
+          margin: "auto",
+        }}
         data-aos="zoom-in"
       >
-        PROJECTS
-      </span>
-      <div className="proj-c project-container">
+        <div
+          className=" p-2 pe-3 ps-3 border"
+          key={uuidv4()}
+          style={{
+            background: "#ffffffff",
+            boxShadow: "0 0 10px #cdcdcdff",
+          }}
+        >
+          PROJECTS
+        </div>
+      </div>
+      <div
+        className="proj-c project-container rounded-4 m-2"
+        style={{ borderTop: "3px solid #fff" }}
+      >
         {projects.titles.map((t, index) => (
           <>
             <div

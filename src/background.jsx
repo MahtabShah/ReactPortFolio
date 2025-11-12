@@ -1,20 +1,21 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { v4 as uuidv4 } from "uuid";
 import "aos/dist/aos.css";
 import "./App.css";
 import SocialIcons from "./SocialIcon";
 import Page from "./Page";
-import Footar from "./Footer";
 import Skills from "./Skills";
 import Project from "./Project";
+import BGSection from "./component/BG";
+import BG2 from "./component/BG2";
 
 export default function Background() {
   return (
     <>
+      {/* <BGSection></BGSection> */}
+      {/* <BG2></BG2> */}
       <Page></Page>
       <Project />
       <Skills></Skills>
-      <Footar></Footar>
       <Footer></Footer>
     </>
   );
@@ -63,11 +64,13 @@ export function Footer() {
   return (
     <>
       <div className="all-right contact">
-        <div className="msgSocialMedia">
+        <div className="msgSocialMedia ">
           <Massage></Massage>
           <SocialMedia></SocialMedia>
         </div>
-        <p className="text">Developed by Mahtāb Shah.</p>
+        <p className="py-5 bg-dark text-light mb-0">
+          Designed & Developed by Mahtāb Shah.
+        </p>
       </div>
     </>
   );
@@ -83,7 +86,7 @@ export function Massage() {
         data-aos-easing="ease-out-cubic"
         data-aos-duration="600"
       >
-        <form>
+        <form className="">
           <div className="ms-bar ms-bar3"></div>
           <div className="ms-what-sl">
             <b className="">Massage</b>
@@ -133,6 +136,7 @@ export function Massage() {
   );
 }
 
+import { EnvelopeFill, TelephoneFill, GeoAltFill } from "react-bootstrap-icons";
 export function SocialMedia() {
   const social = {
     name: ["linkedin", "twitter", "github", "youtube"],
@@ -146,15 +150,36 @@ export function SocialMedia() {
   return (
     <>
       <div
-        className="socil-side align-items-center"
+        className="socil-side gap-4 rounded-4 py-4"
         data-aos="flip-up"
         data-aos-easing="ease-out-cubic"
         data-aos-duration="600"
+        style={{
+          borderTop: "3px solid #ffffffff",
+          boxShadow: "0 -2px 12px #f0f0f0ff",
+        }}
       >
-        <div className="belowIcons">
-          <h2 className="text">Contact / Follow me</h2>
+        <div className="px-3 pt-3" style={{ textAlign: "center" }}>
+          This is my Social account, you can connect.
         </div>
-        <SocialIcons></SocialIcons>
+        {/* <h3 className="sharp">Connect with Me</h3> */}
+        <div className="d-flex flex-wrap align-items-center justify-content-center">
+          <SocialIcons></SocialIcons>
+          {/* <div className="d-flex flex-column">
+            <div className="d-flex p-3 gap-3 align-items-center">
+              <i className="fas fa-envelope text-primary fa-1x"></i>
+              <i className="text-muted">example@gmail.com</i>
+            </div>
+            <div className="d-flex gap-3 align-items-center p-3">
+              <i className="fas fa-phone text-success fa-1x mb-2"></i>
+              <i className="text-muted ">+91 9876543210</i>
+            </div>
+            <div className="d-flex p-3 gap-3 align-items-center">
+              <i className="fas fa-map-marker-alt text-danger fa-1x"></i>
+              <i className="text-muted">Pratpgarh, U.P. India</i>
+            </div>
+          </div> */}
+        </div>
       </div>
     </>
   );

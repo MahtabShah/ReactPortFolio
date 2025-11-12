@@ -1,0 +1,59 @@
+:root {
+  --msh-bg-clr: #33333300 calc(50% - 2px), #010a311d calc(50% - 1px),
+    #111a4090 calc(50%), #a8a6a600 calc(50% + 1px), #33333300 calc(2px + 50%);
+  --b-clr-msh: rgb(79, 91, 195);
+  --msh-dir-clr: linear-gradient(30deg, var(--msh-bg-clr)),
+    linear-gradient(120deg, var(--msh-bg-clr)),
+    linear-gradient(60deg, var(--msh-bg-clr)),
+    repeating-radial-gradient(
+      at center,
+      #33333300 calc(0% + 1px),
+      #33333300 calc(3% + 1px),
+      var(--b-clr-msh) calc(3% + 2px),
+      #33333300 calc(3% + 3px),
+      #33333300 calc(7% + 1px),
+      var(--b-clr-msh) calc(7% + 2px),
+      #55111100 calc(7% + 3px),
+      #55111100 calc(13% + 3px),
+      #55111100 calc(13% + 3px),
+      #55111100 calc(18% + 2px),
+      var(--b-clr-msh) calc(18% + 2px),
+      var(--b-clr-msh) calc(18% + 3px),
+      #00000000 calc(18% + 4px),
+      #33333300 calc(30%),
+      var(--b-clr-msh) calc(30% + 1px),
+      #33333300 calc(30% + 2px),
+      #33333300 calc(50% + 2px),
+      var(--b-clr-msh) calc(50% + 3px),
+      #33333300 calc(50% + 4px),
+      #33333300 calc(70% + 2px),
+      var(--b-clr-msh) calc(70% + 3px),
+      #33333300 calc(70% + 4px),
+      #33333300 calc(80% + 3px),
+      var(--b-clr-msh) calc(80% + 4px),
+      #33333300 calc(80% + 5px),
+      #33333300 calc(90% + 5px),
+      var(--b-clr-msh) calc(80% + 5px)
+    ),
+    radial-gradient(at center, #000220d1, #0a0128aa);
+}
+
+main {
+  height: calc(80vh + 20vw);
+  width: 100%;
+  background-color: aliceblue;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+section {
+  border: 3px solid rgb(0, 0, 0);
+  color: rgb(197, 197, 197);
+  width: 100%;
+  height: calc(max(80vh + 20vw, 100vw));
+  color: #030f38;
+  background-position: center;
+  background-size: cover;
+  /* border: 2px solid red; */
+  /* background: var(--msh-dir-clr); */
+}

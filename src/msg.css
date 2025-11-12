@@ -3,17 +3,17 @@
   flex-direction: column;
   justify-content: end;
   overflow: hidden;
-  background: linear-gradient(to bottom, #f1ecf3, #dcdbde);
+  background: linear-gradient(to bottom, #edecee, #ebe9ef);
   color: #3d3d3d;
 }
 
 .msgSocialMedia {
   display: flex;
   /* border: 2px solid red; */
-  padding: 3%;
+  padding: 4%;
   gap: 20px;
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .msgbox {
@@ -194,4 +194,10 @@
   font-size: 1.2rem;
   font-weight: bold;
   color: #fff;
+}
+
+@media (min-width: 1260px) {
+  .msgSocialMedia {
+    grid-template-columns: 1.8fr 1fr;
+  }
 }

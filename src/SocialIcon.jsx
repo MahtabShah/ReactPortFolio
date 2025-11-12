@@ -6,16 +6,22 @@ const SocialIcons = () => {
   const icons = [
     { name: "facebook", link: "#" },
     { name: "twitter", link: "#" },
-    { name: "google-plus", link: "#" },
+    { name: "github", link: "https://github.com/MahtabShah/" },
     { name: "linkedin", link: "#" },
     { name: "instagram", link: "#" },
-    { name: "github", link: "https://github.com/MahtabShah/" },
+    { name: "google-plus", link: "#" },
   ];
 
   return (
-    <ul className="social-icons">
+    <ul
+      className="gap-5"
+      style={{ display: "grid", gridTemplateColumns: "120px  120px" }}
+    >
       {icons.map((icon, i) => (
-        <li key={icon.name}>
+        <li
+          key={icon.name}
+          className="d-flex flex-column gap-2 align-items-center"
+        >
           <a
             href={icon.link}
             key={uuidv4()}
@@ -23,6 +29,7 @@ const SocialIcons = () => {
             data-aos-easing="ease-out-cubic"
             data-aos-duration={100 + i * 400}
             data-aos-offset="10"
+            className=""
           >
             <i
               key={uuidv4()}
@@ -30,6 +37,7 @@ const SocialIcons = () => {
               aria-hidden="true"
             ></i>
           </a>
+          <span>{icon.name}</span>
         </li>
       ))}
     </ul>

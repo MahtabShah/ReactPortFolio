@@ -1,0 +1,17 @@
+.bg-section {
+  border: 2px solid red;
+  aspect-ratio: 1/1;
+  width: 100vw;
+  height: 100vh;
+  background: repeating-linear-gradient(
+      0deg,
+      rgb(57, 57, 222) 10px,
+      transparent 11px,
+      transparent 50px,
+      rgb(57, 57, 222) 51px,
+      rgb(57, 57, 222) 52px
+    ),
+    repeating-radial-gradient(at center, rgb(33, 33, 180), rgb(20, 11, 115));
+
+  color: rgb(174, 174, 174);
+}

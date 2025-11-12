@@ -9,8 +9,31 @@ export default function Skills() {
     <div className="ftr">
       <div className="skills">
         <div className="infoSkilss">
-          <div className="h2div sklvl heading">SKILL PROFICIANCY</div>
-          <div className="skillDiscription text" data-aos="flip-down">
+          <div
+            className="sharp rounded  d-flex justify-content-center align-items-center"
+            style={{
+              height: "10px",
+              // background: "#ffffffff",
+            }}
+            data-aos="zoom-in"
+          >
+            <div
+              className=" p-2 pe-3 ps-3 border rounded"
+              key={uuidv4()}
+              style={{
+                background: "#ffffffff",
+                boxShadow: "0 0 10px #cdcdcdff",
+              }}
+            >
+              SKILLS PROFICIENCY
+            </div>
+          </div>
+
+          <div
+            className="skillDiscription mt-3 pt-3 rounded"
+            data-aos="flip-down"
+            style={{ borderTop: "3px solid #fff" }}
+          >
             Proficient in designing, developing, and deploying scalable web
             applications, with expertise in both front-end and back-end
             technologies. Experienced in working with modern frameworks,
@@ -22,7 +45,26 @@ export default function Skills() {
           </div>
         </div>
         <div className="skilicon">
-          <div className="h2div heading">SKILL SET</div>
+          <div
+            className="sharp rounded my-3 d-flex justify-content-center align-items-center"
+            style={{
+              height: "10px",
+              background: "#ffffffff",
+              margin: "auto",
+            }}
+            data-aos="zoom-in"
+          >
+            <div
+              className=" p-2 pe-3 ps-3 border rounded"
+              key={uuidv4()}
+              style={{
+                background: "#ffffffff",
+                boxShadow: "0 0 10px #cdcdcdff",
+              }}
+            >
+              SKILLS SET
+            </div>
+          </div>
           <WheelSkill></WheelSkill>
         </div>
 
@@ -382,7 +424,10 @@ export function WheelSkill() {
   ];
 
   return (
-    <div className="div-pr">
+    <div
+      className="div-pr mt-4 pt-2 rounded"
+      style={{ borderTop: "3px solid #fff" }}
+    >
       {nms.map((item, index) => (
         <div className="skill-rd">
           <SkillCmponent key={index} wd="" ht="" nm={item} svg={SVGs[index]} />

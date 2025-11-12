@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #dedede;
 }
 
 ul {
@@ -10,8 +9,12 @@ ul {
   z-index: 100;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 0 20px;
+  flex-grow: 1;
+  min-width: 340px !important;
+  justify-content: space-around;
+  align-items: center;
   /* border: 2px solid red; */
 }
 
@@ -32,9 +35,9 @@ ul li a {
   padding: 6px;
   box-sizing: border-box;
   text-decoration: none;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 15px rgba(86, 86, 86, 0.274);
   background: linear-gradient(0deg, #dddddd, #ffffff);
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 ul li a:hover {

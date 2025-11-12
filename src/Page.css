@@ -1,9 +1,34 @@
+:root {
+  --bgr1: #0b0340;
+  --bgr2: #12094b7f;
+  --rp-msh-bg-main: repeating-linear-gradient(
+      0deg,
+      #0000 0px,
+      #0000 40px,
+      #21104e 41px,
+      #21104e 42px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #0000 0px,
+      #0000 40px,
+      #21104e 41px,
+      #21104e 42px
+    ),
+    linear-gradient(to right, var(--bgr1), var(--bgr2)),
+    linear-gradient(to top, var(--bgr1), var(--bgr2)),
+    linear-gradient(to bottom, var(--bgr1), var(--bgr2)),
+    linear-gradient(to left, var(--bgr1), var(--bgr2));
+}
+
 .p {
   background: linear-gradient(180deg, #ffffff, #f2f2f2);
+  /* background: var(--rp-msh-bg-main); */
+
   margin-top: 20px;
   flex-flow: column nowrap;
   /* border: 2px solid red; */
-  height: 90vh;
+  height: 100dvh;
 }
 
 .header-item {
@@ -32,20 +57,20 @@
   right: 0;
   top: 0;
   background-color: var(--hdr-clr);
-  background: repeating-linear-gradient(90deg, #891aea, #7f11de);
+  /* background: repeating-linear-gradient(90deg, #030110, #060017); */
   z-index: 100;
 }
 
 .hr span:hover {
   color: var(--primary-color);
   cursor: pointer;
-  text-shadow: 0 10px 15px rgba(148, 146, 146, 0.404);
+  /* text-shadow: 0 10px 15px rgba(148, 146, 146, 0.404); */
 }
 
 #nm {
   font-size: clamp(4px, 4vw, 2.4rem);
   font-weight: 900;
-  background: repeating-linear-gradient(180deg, #ffffff 0%, #ff3c00 100%);
+  background: repeating-linear-gradient(180deg, #ffffff 0%, #ff2a00 100%);
   color: transparent;
   background-clip: text;
   font-family: math;
@@ -63,35 +88,61 @@
   z-index: 7;
 }
 
-.ph {
+.parent-photo {
   /* border: 2px solid red; */
+  margin: calc(1vh + 1vw) calc(4px + 5vh + 2vh);
+}
+
+.ph {
+  /* border: 2px solid rgba(68, 68, 68, 0.373); */
   z-index: 10;
   border-radius: 50%;
-  background: linear-gradient(180deg, #eaeaea, #ffffff);
+  /* background: linear-gradient(0deg, var(--bgr2), #1a088f); */
   width: clamp(100px, calc(100px + 27vw), 400px);
   height: clamp(100px, calc(100px + 27vw), 400px);
   align-items: center;
-  margin-top: 50px;
+  margin-top: 40px;
+  /* border: 2px solid #2b2da6; */
+  transform: scale(1.2);
 }
 
 .my-img {
-  border-radius: 50%;
+  /* border-radius: 50%; */
   z-index: 5;
-  min-width: clamp(100px, calc(70px + 27vw), 400px);
-  min-height: clamp(100px, calc(70px + 27vw), 400px);
+  min-width: clamp(100px, calc(70px + 24vw), 400px);
+  min-height: clamp(100px, calc(70px + 24vw), 400px);
   margin: calc(10px + 4vw);
   background: linear-gradient(180deg, #ffffff, #eaeaea);
+  background: transparent;
+  /* border: 2px solid #2b2da6; */
 }
 
 .my-img div {
-  width: clamp(100px, calc(100px + 20vw), 380px);
-  height: clamp(100px, calc(100px + 20vw), 380px);
-  padding: 20px;
+  width: clamp(100px, calc(100px + 18vw), 380px);
+  height: clamp(100px, calc(100px + 18vw), 380px);
+  /* padding: 20px; */
   border-radius: 50%;
-  background: url("./public/WhatsApp Image 2025-03-31 at 17.44.36_c0d9e4fe.jpg");
-  background-position: center;
+  background: url("./public/WhatsApp_Image_2025-05-01_at_19.55.20_a2fbe65a-removebg-preview.png");
+  background-position: top;
   background-repeat: no-repeat;
   background-size: clamp(100px, calc(100px + 25vw), 400px);
+  border: 2px solid rgb(28, 212, 236);
+  transform: scale(1.15);
+  /* animation: scaleFac 1s ease-in-out 1s infinite; */
+}
+
+@keyframes scaleFac {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .dsr {

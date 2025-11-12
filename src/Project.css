@@ -23,6 +23,11 @@
   background: transparent;
 }
 
+.sharp {
+  /* margin-inline: calc(2% + 2vw); */
+  margin-block: 20px;
+}
+
 .grand-project span {
   background: linear-gradient(90deg, #ffffff, #f8f6f6);
   margin: 10px auto;
